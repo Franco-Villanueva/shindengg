@@ -1,8 +1,14 @@
-import Main from '../src/Components/Main/Main.jsx'
+import Main from './Components/Main/Main.jsx'
+import Navbar from './Components/NavBar/Navbar';
 
 function App() {
   return (
-    <Main />
+    <>
+      <Navbar />
+      <Main />
+      
+    </>
+    
   );
 }
 
