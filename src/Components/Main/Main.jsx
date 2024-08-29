@@ -1,12 +1,14 @@
 import React from 'react';
 import fondo from '../../assets/fondo3.jpeg';
 import logo from '../../assets/logo2.png';
+import Footer from '../Footer/Footer';
 
 const Main = () => {
     return ( 
-        <main className="h-screen w-screen overflow-hidden relative">
+        <>
+        <main className="h-screen w-full overflow-hidden relative">
             {/* Fondo de la página */}
-            <figure className="absolute top-0 left-0 h-full w-full">
+            <figure className="absolute inset-0 h-full w-full">
                 <img src={fondo} alt="fondo shindengg" className="w-full h-full object-cover opacity-35" />
             </figure>
             
@@ -23,16 +25,17 @@ const Main = () => {
                     {/* Botón de llamada a la acción */}
                     <button className="bg-[#f9b6f9] hover:bg-rose-300 text-white font-bold py-2 px-4 rounded-full mt-4">
                         Ver equipos &gt;&gt;
-                        
                     </button>
                 </header>
                 
                 {/* Logo del equipo */}
-                <figure className=" md:mr-16 mt-8 md:mt-0 flex justify-center">
+                <figure className="md:mr-16 mt-8 md:mt-0 flex justify-center">
                     <img src={logo} alt="logo shindengg" className="w-16 h-16 md:w-40 md:h-40 lg:w-64 lg:h-64 xl:w-80 xl:h-80 object-contain" />
                 </figure>
             </div>
         </main>
+        <Footer />
+        </>
     );
 }
 
