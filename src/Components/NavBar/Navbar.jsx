@@ -15,7 +15,7 @@ const Navbar = () => {
 
     return ( 
         <>  
-        <div className="relative w-full bg-red-500">
+        <div className="relative w-full">
             <nav className="navbar fixed top-0 left-0 right-0 flex flex-row items-center justify-between px-16 py-6 my-7 rounded-full pc:mx-52 desktop:mx-24 tablet:mx-14 mobile:mx-6" >
                 <figure className='flex items-center'>
                     <img src={logo} alt="Logo" className='neon-logo w-16 h-16' />
