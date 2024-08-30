@@ -2,6 +2,7 @@ import React from 'react';
 import fondo from '../../assets/fondo3.jpeg';
 import logo from '../../assets/logo2.png';
 import Footer from '../Footer/Footer';
+import News from '../News/News';
 
 const Main = () => {
     return ( 
@@ -34,6 +35,7 @@ const Main = () => {
                 </figure>
             </div>
         </main>
+        <News />
         <Footer />
         </>
     );
