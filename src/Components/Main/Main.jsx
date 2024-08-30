@@ -30,7 +30,7 @@ const Main = () => {
                 
                 {/* Logo del equipo */}
                 <figure className="md:mr-16 mt-8 md:mt-0 flex justify-center">
-                    <img src={logo} alt="logo shindengg" className="w-16 h-16 md:w-40 md:h-40 lg:w-64 lg:h-64 xl:w-80 xl:h-80 object-contain" />
+                    <img src={logo} alt="logo shindengg" className="w-16 h-16 md:w-40 md:h-40 lg:w-64 lg:h-64 xl:w-96 xl:h-96 object-contain" />
                 </figure>
             </div>
         </main>
