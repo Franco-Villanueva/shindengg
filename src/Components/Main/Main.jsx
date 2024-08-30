@@ -16,7 +16,7 @@ const Main = () => {
             {/* Contenido central */}
             <div className="relative flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between h-full text-white px-4 md:px-14 lg:px-24 xl:px-52">
                 {/* Sección de encabezado */}
-                <header className="p-4 md:ml-16 text-center md:text-left mt-16 md:mt-0">
+                <header className="py-4 md:ml-16 text-center md:text-left mt-16 md:mt-0">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 uppercase tracking-wide text-center md:text-left">
                         Shindengg
                     </h1>
