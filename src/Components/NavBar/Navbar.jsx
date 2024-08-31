@@ -26,13 +26,13 @@ const Navbar = () => {
                             <a to="/nosotros" className='text-white text-shadow-hover md:text-m lg:text-l xl:text-xl'>Nosotros</a>
                         </li>
                         <li>
-                            <a to="/equipos" className='text-white text-shadow-hover md:text-m lg:text-l xl:text-xl'>Equipos</a>
+                            <Link to="/teams" className='text-white text-shadow-hover md:text-m lg:text-l xl:text-xl'>Equipos</Link>
                         </li>
                         <li>
                             <a to="/contacto" className='text-white text-shadow-hover md:text-m lg:text-l xl:text-xl'>Contacto</a>
                         </li>
                         <li>
-                            <a to="/noticias" className='text-white text-shadow-hover md:text-m lg:text-l xl:text-xl'>Noticias</a>
+                            <Link to="/news" className='text-white text-shadow-hover md:text-m lg:text-l xl:text-xl'>Noticias</Link>
                         </li>
                     </ul>
 

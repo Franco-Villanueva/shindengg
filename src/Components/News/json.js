@@ -36,6 +36,24 @@ const news = [
         "title": "Noticia 6",
         "img": logo,
         "info": "Resumen de la noticia 6. Esta es una breve descripción del contenido de la noticia."
+    },
+    {
+        "id": 7,
+        "title": "Noticia 7",
+        "img": logo,
+        "info": "Resumen de la noticia 6. Esta es una breve descripción del contenido de la noticia."
+    },
+    {
+        "id": 8,
+        "title": "Noticia 8",
+        "img": logo,
+        "info": "Resumen de la noticia 6. Esta es una breve descripción del contenido de la noticia."
+    },
+    {
+        "id": 9,
+        "title": "Noticia 9",
+        "img": logo,
+        "info": "Resumen de la noticia 6. Esta es una breve descripción del contenido de la noticia."
     }
 ];
 
