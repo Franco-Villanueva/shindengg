@@ -10,8 +10,8 @@ const NewsPage = () => {
                 style={{
                     backgroundImage: `url(${Background})`,
                     backgroundSize: '100% auto',  // Ajuste del tamaño para cubrir el ancho y repetir verticalmente
-                    backgroundRepeat: 'repeat-y',  // Repetir solo en la dirección vertical
-                    filter: 'blur(25px)' // Aplicar desenfoque al fondo
+                    backgroundRepeat: 'repeat-y',  
+                    filter: 'blur(25px)'
                 }}
             ></div>
             
