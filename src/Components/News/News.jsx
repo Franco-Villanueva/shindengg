@@ -1,44 +1,39 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion'; // Importa motion de Framer Motion
 import news from './json';
 
-const News = ({ showLoadMoreButton }) => { 
-    // Estado para almacenar todas las noticias
-    const [columns, setColumns] = useState('grid-cols-1'); // Por defecto, 1 columna para móviles
-    const [visibleNews, setVisibleNews] = useState(2); // Por defecto, 2 noticias visibles para móviles
-
-    // const fetchNews = async () => {
-    //     try {
-    //         const response = await fetch('https://api.example.com/news');
-    //         const data = await response.json();
-    //         setNews(data); // Guardar las noticias en el estado
-    //     } catch (error) {
-    //         console.error('Error al obtener las noticias:', error);
-    //     }
-    // };
+const News = ({ showLoadMoreButton }) => {
+    const [columns, setColumns] = useState('grid-cols-1');
+    const [visibleNews, setVisibleNews] = useState(2);
 
     const handleResize = () => {
         const width = window.innerWidth;
         if (width >= 1024) {
-            setColumns('grid-cols-3'); // 3 columnas para escritorio
-            setVisibleNews(6); // Mostrar 6 noticias en PC
+            setColumns('grid-cols-3');
+            setVisibleNews(6);
         } else if (width >= 768) {
-            setColumns('grid-cols-2'); // 2 columnas para tabletas
-            setVisibleNews(4); // Mostrar 4 noticias en tabletas
+            setColumns('grid-cols-2');
+            setVisibleNews(4);
         } else {
-            setColumns('grid-cols-1'); // 1 columna para móviles
-            setVisibleNews(2); // Mostrar 2 noticias en móviles
+            setColumns('grid-cols-1');
+            setVisibleNews(2);
         }
     };
 
     useEffect(() => {
-        // fetchNews(); // Llamar a la función para obtener las noticias
         window.addEventListener('resize', handleResize);
-        handleResize(); // Llamar a la función inicialmente para configurar las columnas y noticias visibles
+        handleResize();
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const loadMoreNews = () => {
-        setVisibleNews(prevVisibleNews => prevVisibleNews + 2); // Incrementa el número de noticias visibles en 2
+        setVisibleNews(prevVisibleNews => prevVisibleNews + 2);
+    };
+
+    // Definir las variantes de animación para el efecto de expansión circular
+    const newsVariants = {
+        hidden: { scale: 0, opacity: 0 }, // Inicia con escala 0 (totalmente reducido) y opacidad 0
+        visible: { scale: 1, opacity: 1 } // Expande a escala 1 (tamaño completo) y opacidad 1
     };
 
     return (
@@ -46,14 +41,19 @@ const News = ({ showLoadMoreButton }) => {
             <h2 className="mx-16 text-2xl font-bold text-[#f9b6f9] mb-6">Noticias</h2>
             <div className={`mx-16 grid ${columns} gap-6`}>
                 {news?.slice(0, visibleNews).map((item) => (
-                    <div key={item.id} className="relative h-48 md:h-64 bg-[#f9b6f9ce] rounded-lg flex flex-col items-center justify-center text-center transform transition-transform duration-[1000ms] hover:scale-105">
+                    <motion.div
+                        key={item.id}
+                        className="relative h-48 md:h-64 bg-[#f9b6f9ce] rounded-lg flex flex-col items-center justify-center text-center overflow-hidden cursor-pointer"
+                        initial="hidden" // Estado inicial de la animación
+                        animate="visible" // Estado final de la animación
+                        variants={newsVariants} // Variantes de animación definidas
+                        transition={{ duration: 0.5, ease: "easeOut" }} // Duración y tipo de transición
+                    >
                         <img src={item.img} alt={item.title} className="w-full h-full object-cover rounded-3xl opacity-25" />
                         <h3 className="absolute text-white font-bold">{item.title}</h3>
-                        {/* <p className="text-gray-700">{item.info}</p> */}
-                    </div>
+                    </motion.div>
                 ))}
             </div>
-            {/* Mostrar el botón solo si `showLoadMoreButton` es verdadero y hay más noticias para mostrar */}
             {showLoadMoreButton && visibleNews < news.length && (
                 <div className="flex justify-center mt-6">
                     <button onClick={loadMoreNews} className="bg-[#f9b6f9] hover:bg-rose-300 text-white font-bold py-2 px-4 rounded-full">
@@ -61,7 +61,6 @@ const News = ({ showLoadMoreButton }) => {
                     </button>
                 </div>
             )}
-            {/* Mostrar mensaje solo si no hay más noticias para cargar */}
             {showLoadMoreButton && visibleNews >= news.length && (
                 <span className="text-white mt-6 block text-center">No hay más noticias</span>
             )}

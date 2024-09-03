@@ -1,26 +1,41 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import Main from './Components/Main/Main';
-import Navbar from './Components/NavBar/Navbar';
-import Teams from './Components/Teams/Teams'; // Asegúrate de crear este componente
-import News from './Components/News/News'; // Asegúrate de crear este componente
 import NewsPage from './Pages/News Page/NewsPage';
-// import Contact from './Components/Contact/Contact'; // Asegúrate de crear este componente
-// import Shop from './Components/Shop/Shop'; // Asegúrate de crear este componente
+import Navbar from './Components/NavBar/Navbar';
+import TeamsPage from './Pages/Teams Page/TeamsPage';
 
-function App() {
+const App = () => {
+  const location = useLocation(); // Obtén la ubicación actual para detectar cambios de ruta
+
   return (
-    <Router>
+    <>
+    <div style={{ overflowX: 'hidden' }}> 
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/teams" element={<Teams />} />
-        <Route path="/news" element={<NewsPage />} />
-        {/* <Route path="/contact" element={<Contact />} />
-        <Route path="/shop" element={<Shop />} /> */}
-      </Routes>
-    </Router>
+      <AnimatePresence mode="wait"> {/* Cambiar exitBeforeEnter a mode="wait" */}
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<PageTransition><Main /></PageTransition>} />
+          <Route path="/teams" element={<PageTransition><TeamsPage /></PageTransition>} />
+          <Route path="/news" element={<PageTransition><NewsPage /></PageTransition>} />
+        </Routes>
+      </AnimatePresence>
+    </div>
+    </>
+    
   );
-}
+};
+
+// Componente de transición de página que usa Framer Motion
+const PageTransition = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0, x: -50 }} // Comienza con la opacidad en 0 y se desplaza a la izquierda
+    animate={{ opacity: 1, x: 0 }} // Termina con la opacidad en 1 y sin desplazamiento
+    exit={{ opacity: 0, x: 50 }} // Desvanece y desplaza a la derecha al salir
+    transition={{ duration: 0.5 }} // Duración de la animación
+  >
+    {children}
+  </motion.div>
+);
 
 export default App;

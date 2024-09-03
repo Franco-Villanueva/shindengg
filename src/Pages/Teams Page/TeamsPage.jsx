@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
-import News from "../../Components/News/News";
-import Background from '../../assets/backgroundNews2.jpg';
+import Background from '../../assets/fondo2.jpeg';
 
-const NewsPage = () => {
+const TeamsPage = () => {
     
     useEffect(() => {
         
@@ -18,7 +17,7 @@ const NewsPage = () => {
                     backgroundImage: `url(${Background})`,
                     backgroundSize: '100% auto',  // Ajuste del tamaño para cubrir el ancho y repetir verticalmente
                     backgroundRepeat: 'repeat-y',  
-                    filter: 'blur(25px)'
+                    
                 }}
             ></div>
             
@@ -27,10 +26,10 @@ const NewsPage = () => {
 
             {/* Contenido principal */}
             <div className="relative">
-                <News showLoadMoreButton={true} />
+                <h1>TEAMS PAGE</h1>
             </div>
         </div>
     );
 }
 
-export default NewsPage;
+export default TeamsPage;
