@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion'; // Importa motion de Framer Motion
+import { color, motion } from 'framer-motion'; // Importa motion de Framer Motion
 import news from './json';
 
 const News = ({ showLoadMoreButton }) => {

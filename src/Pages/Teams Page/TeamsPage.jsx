@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Background from '../../assets/fondo2.jpeg';
+import Teams from '../../Components/Teams/Teams';
 
 const TeamsPage = () => {
     
@@ -9,15 +10,14 @@ const TeamsPage = () => {
     }, []);
 
     return ( 
-        <div className="relative w-full min-h-screen flex justify-center items-center py-44">
+        <div className="relative w-full min-h-screen flex justify-center items-center">
             {/* Capa del fondo con desenfoque */}
             <div 
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
                     backgroundImage: `url(${Background})`,
-                    backgroundSize: '100% auto',  // Ajuste del tamaño para cubrir el ancho y repetir verticalmente
+                    backgroundSize: '100% auto',  
                     backgroundRepeat: 'repeat-y',  
-                    
                 }}
             ></div>
             
@@ -25,8 +25,8 @@ const TeamsPage = () => {
             <div className="absolute inset-0 bg-black opacity-75"></div>
 
             {/* Contenido principal */}
-            <div className="relative">
-                <h1>TEAMS PAGE</h1>
+            <div className="relative w-full h-screen">
+                <Teams />
             </div>
         </div>
     );
