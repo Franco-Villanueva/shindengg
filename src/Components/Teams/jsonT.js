@@ -1,18 +1,22 @@
+import valo from '../../assets/games/valorant.png';
+import cs from '../../assets/games/image.webp';
+import fortnite from '../../assets/games/fortnite-logo.webp';
+
 const teams =[
     {
         "id": 1,
         "title": "Valorant",
-        "img": "https://example.com/valorant.jpg"
+        "img": valo
     },
     {
         "id": 2,
         "title": "Fortnite",
-        "img": "https://example.com/fortnite.jpg"
+        "img": fortnite
     },
     {
         "id": 3,
         "title": "CS2",
-        "img": "https://example.com/cs2.jpg"
+        "img": cs
     },
     {
         "id": 4,

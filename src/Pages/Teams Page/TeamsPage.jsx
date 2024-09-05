@@ -13,11 +13,9 @@ const TeamsPage = () => {
         <div className="relative w-full min-h-screen flex justify-center items-center">
             {/* Capa del fondo con desenfoque */}
             <div 
-                className="absolute inset-0 bg-cover bg-center"
+                className="absolute inset-0 bg-cover bg-center object-contain blur-sm"
                 style={{
-                    backgroundImage: `url(${Background})`,
-                    backgroundSize: '100% auto',  
-                    backgroundRepeat: 'repeat-y',  
+                    backgroundImage: `url(${Background})`  
                 }}
             ></div>
             
@@ -26,6 +24,7 @@ const TeamsPage = () => {
 
             {/* Contenido principal */}
             <div className="relative w-full h-screen">
+                
                 <Teams />
             </div>
         </div>

@@ -11,11 +11,13 @@ const Teams = () => {
 
     return ( 
         <>
-            <div className="flex flex-wrap gap-8 w-full h-full p-8 justify-center items-center">
+        <section className="relative px-4 md:px-14 lg:px-24 xl:px-52">
+            <h2 className="mx-16 text-2xl font-bold text-[#f9b6f9] mb-6">Noticias</h2>
+            <div className="flex flex-wrap space-x-4 w-full h-full p-8 justify-center items-center">
                 {teams?.map((item) => (
                     <motion.div
                         key={item.id}
-                        className="h-48 w-48 bg-[#f9b6f9] rounded-lg flex flex-col items-center justify-center text-center overflow-hidden cursor-pointer"
+                        className="h-48 w-48 bg-[#1b1a1b] rounded-lg flex flex-col items-center justify-center text-center overflow-hidden cursor-pointer"
                         initial="hidden"
                         animate="visible"
                         whileHover={{ scale: 1.05 }}
@@ -25,12 +27,13 @@ const Teams = () => {
                         <img 
                             src={item.img} 
                             alt={item.title} 
-                            className="w-full h-full object-cover" 
+                            className="w-full h-full object-contain" 
                         />
-                        <h3 className="absolute text-white font-bold text-lg">{item.title}</h3>
+                        {/* <h3 className="absolute text-white font-bold text-lg">{item.title}</h3> */}
                     </motion.div>
                 ))}
             </div>
+            </section>
         </>
     );
 }
