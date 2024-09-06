@@ -10,12 +10,13 @@ const TeamsPage = () => {
     }, []);
 
     return ( 
-        <div className="relative w-full min-h-screen flex justify-center items-center">
+        <div className="relative w-full min-h-screen flex justify-center items-center py-44">
             {/* Capa del fondo con desenfoque */}
             <div 
                 className="absolute inset-0 bg-cover bg-center object-contain blur-sm"
                 style={{
-                    backgroundImage: `url(${Background})`  
+                    backgroundImage: `url(${Background})`,
+                    filter: 'blur(10px)'  
                 }}
             ></div>
             
@@ -23,7 +24,7 @@ const TeamsPage = () => {
             <div className="absolute inset-0 bg-black opacity-75"></div>
 
             {/* Contenido principal */}
-            <div className="relative w-full h-screen">
+            <div className="relative w-full h-full">
                 
                 <Teams />
             </div>

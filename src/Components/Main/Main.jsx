@@ -1,25 +1,24 @@
 import React from 'react';
 import fondo from '../../assets/fondo3.jpeg';
 import logo from '../../assets/logo2.png';
+import text from '../../assets/Logo-largoW.png'
 import Footer from '../Footer/Footer';
 import News from '../News/News';
 
 const Main = () => {
     return ( 
         <>
-        <main className="h-screen w-full overflow-hidden relative">
-            {/* Fondo de la página */}
-            <figure className="absolute inset-0 h-full w-full">
-                <img src={fondo} alt="fondo shindengg" className="w-full h-full object-cover opacity-35" />
-            </figure>
+        <main className='h-screen w-screen items-center justify-between px-16 mx-2 rounded-full xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6'>
             
             {/* Contenido central */}
-            <div className="relative flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between h-full text-white px-4 md:px-14 lg:px-24 xl:px-52">
+            <div className="relative flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between h-full text-white">
                 {/* Sección de encabezado */}
-                <header className="py-4 md:ml-16 text-center md:text-left mt-16 md:mt-0">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 uppercase tracking-wide text-center md:text-left">
-                        Shindengg
-                    </h1>
+                <header className="text-center md:text-left flex flex-col items-center md:items-start">
+                    <img
+                        src={text}   // Reemplaza con la ruta de tu imagen 
+                        alt="Shindengg"   // Texto alternativo para accesibilidad 
+                        className="w-64 md:w-72 lg:w-80 xl:w-[600px] h-auto"
+                    />
                     <p className="text-sm md:text-base lg:text-lg max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg text-center md:text-left mb-4">
                         Somos un equipo de eSports apasionado y dedicado, comprometido a llevar la competición al siguiente nivel. En Shindengg, creemos en la excelencia, el trabajo en equipo y la perseverancia. Únete a nosotros en nuestra aventura para dominar la escena de los eSports.
                     </p>
@@ -30,13 +29,12 @@ const Main = () => {
                 </header>
                 
                 {/* Logo del equipo */}
-                <figure className="md:mr-16 mt-8 md:mt-0 flex justify-center">
+                <figure className="flex justify-center mt-8 md:mt-0">
                     <img src={logo} alt="logo shindengg" className="w-16 h-16 md:w-40 md:h-40 lg:w-64 lg:h-64 xl:w-96 xl:h-96 object-contain" />
                 </figure>
             </div>
+
         </main>
-        <News />
-        <Footer />
         </>
     );
 }

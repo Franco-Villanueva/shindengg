@@ -12,12 +12,21 @@ const Teams = () => {
     return ( 
         <>
         <section className="relative px-4 md:px-14 lg:px-24 xl:px-52">
-            <h2 className="mx-16 text-2xl font-bold text-[#f9b6f9] mb-6">Noticias</h2>
-            <div className="flex flex-wrap space-x-4 w-full h-full p-8 justify-center items-center">
+        <h2 className="mx-4 md:mx-8 lg:mx-12 xl:mx-16 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
+            EQUIPOS
+        </h2>
+            <div className="flex flex-wrap justify-center md:justify-between w-full h-full p-16">
                 {teams?.map((item) => (
                     <motion.div
                         key={item.id}
-                        className="h-48 w-48 bg-[#1b1a1b] rounded-lg flex flex-col items-center justify-center text-center overflow-hidden cursor-pointer"
+                        className="
+                            bg-[#ffffff23] rounded-3xl flex flex-col items-center justify-center text-center overflow-hidden cursor-pointer m-2
+                            h-36 w-36     
+                            sm:h-36 sm:w-36  
+                            md:h-40 md:w-40  
+                            lg:h-44 lg:w-44  
+                            xl:h-52 xl:w-52
+                        "
                         initial="hidden"
                         animate="visible"
                         whileHover={{ scale: 1.05 }}
@@ -27,13 +36,12 @@ const Teams = () => {
                         <img 
                             src={item.img} 
                             alt={item.title} 
-                            className="w-full h-full object-contain" 
+                            className="w-full h-full object-contain p-5" 
                         />
-                        {/* <h3 className="absolute text-white font-bold text-lg">{item.title}</h3> */}
                     </motion.div>
                 ))}
             </div>
-            </section>
+        </section>
         </>
     );
 }

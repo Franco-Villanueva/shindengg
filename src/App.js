@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import Main from './Components/Main/Main';
 import NewsPage from './Pages/News Page/NewsPage';
 import Navbar from './Components/NavBar/Navbar';
 import TeamsPage from './Pages/Teams Page/TeamsPage';
+import MainPage from './Pages/Main Page/MainPage';
 
 const App = () => {
   const location = useLocation(); // Obtén la ubicación actual para detectar cambios de ruta
@@ -15,7 +15,7 @@ const App = () => {
       <Navbar />
       <AnimatePresence mode="wait"> {/* Cambiar exitBeforeEnter a mode="wait" */}
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<PageTransition><Main /></PageTransition>} />
+          <Route path="/" element={<PageTransition><MainPage /></PageTransition>} />
           <Route path="/teams" element={<PageTransition><TeamsPage /></PageTransition>} />
           <Route path="/news" element={<PageTransition><NewsPage /></PageTransition>} />
         </Routes>

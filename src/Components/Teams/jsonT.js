@@ -1,6 +1,6 @@
-import valo from '../../assets/games/valorant.png';
-import cs from '../../assets/games/image.webp';
-import fortnite from '../../assets/games/fortnite-logo.webp';
+import valo from '../../assets/games/valorant-Photoroom.png';
+import cs from '../../assets/games/counter-strike-29548.logowik-Photoroom.png';
+import fortnite from '../../assets/games/fortnite-logo-Photoroom.png';
 
 const teams =[
     {
@@ -18,11 +18,6 @@ const teams =[
         "title": "CS2",
         "img": cs
     },
-    {
-        "id": 4,
-        "title": "Coming Soon",
-        "img": "https://example.com/comingsoon.jpg"
-    }
 ]
 
 export default teams;

@@ -1,6 +1,7 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo2.png'
+import logo from '../../assets/Logo_B.png'
 import './styles.css'; 
 
 const Navbar = () => {
@@ -11,28 +12,34 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const navigate = useNavigate(); // Hook de react-router para navegación
 
+    const handleSectionClick = (path) => {
+        // Cambia la ruta y cierra el menú
+        navigate(path);
+        setIsMenuOpen(false);
+    };
 
     return ( 
         <>  
         <div className="relative w-full">
-            <nav className="navbar fixed top-0 left-0 right-0 flex flex-row items-center justify-between px-16 py-6 my-7 rounded-full pc:mx-52 desktop:mx-24 tablet:mx-14 mobile:mx-6" >
-                <figure className='flex items-center'>
-                    <img src={logo} alt="Logo" className='neon-logo w-16 h-16' />
+            <nav className="navbar fixed top-0 left-0 right-0 flex flex-row items-center justify-between px-16 py-6 my-7 mx-2 rounded-full xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6" >
+                <figure className='flex items-center w-16 h-16'>
+                    <img src={logo} alt="Logo Shinden" className='neon-logo' />
                 </figure>
                 <div className='flex flex-row justify-around'>
                     <ul className='hidden md:flex flex-row space-x-8 items-center pc:mx-16 '>
                         <li>
-                            <a to="/nosotros" className='text-white text-shadow-hover md:text-m lg:text-l xl:text-xl'>Nosotros</a>
+                            <a to="/nosotros" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>NOSOTROS</a>
                         </li>
                         <li>
-                            <Link to="/teams" className='text-white text-shadow-hover md:text-m lg:text-l xl:text-xl'>Equipos</Link>
+                            <Link to="/teams" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>EQUIPOS</Link>
                         </li>
                         <li>
-                            <a to="/contacto" className='text-white text-shadow-hover md:text-m lg:text-l xl:text-xl'>Contacto</a>
+                            <a to="/contacto" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>CONTACTO</a>
                         </li>
                         <li>
-                            <Link to="/news" className='text-white text-shadow-hover md:text-m lg:text-l xl:text-xl'>Noticias</Link>
+                            <Link to="/news" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>NOTICIAS</Link>
                         </li>
                     </ul>
 
@@ -46,7 +53,7 @@ const Navbar = () => {
                         <div className={`transition-transform duration-300 ease-in-out transform ${isMenuOpen ? '-rotate-45' : 'my-2'} absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 `} style={{width: '24px', height: '2px', backgroundColor: 'currentColor'}} />
                     </button>
 
-
+                    
                     <ul className='hidden pc:flex flex-row space-x-8 items-center'>
                         <li>
                             <a className='transition-transform duration-300 ease-in-out transform hover:scale-125 flex items-center justify-center'>
@@ -86,21 +93,21 @@ const Navbar = () => {
                             <ul className="flex flex-col space-y-10 py-8 items-center ">
                                 <span className='text-xl p-0 m-0 text-white '>Menu</span>
                                 <li>
-                                <a to="/nosotros" className="text-white text-shadow-hover md:text-m lg:text-l xl:text-xl">Nosotros</a>
+                                <a to="/nosotros" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>NOSOTROS</a>
                                 </li>
-                                <hrx className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
+                                <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
                                 <li>
-                                <a to="/equipos" className="text-white text-shadow-hover md:text-m lg:text-l xl:text-xl">Equipos</a>
+                                <Link onClick={() => handleSectionClick('/teams')} to="/teams" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>EQUIPOS</Link>
                                 </li>
-                                <hrx className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
+                                <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
                                 <li>
-                                <a to="/contacto" className="text-white text-shadow-hover md:text-m lg:text-l xl:text-xl">Contacto</a>
+                                <a to="/contacto" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>CONTACTO</a>
                                 </li>
-                                <hrx className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
+                                <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
                                 <li>
-                                <a to="/noticias" className="text-white text-shadow-hover md:text-m lg:text-l xl:text-xl">Noticias</a>
+                                <Link onClick={() => handleSectionClick('/news')} to="/news" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>NOTICIAS</Link>
                                 </li>
-                                <hrx className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
+                                <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
                                 <li>
                                     <span className='text-white text-l justify-center p-0 m-0 flex items-center'>Ⓒ <b> 2024 ShindenGG.</b></span>
                                     <span className='text-white text-l justify-center p-0 m-0 flex items-center'><b>Team by Lit Killah and Spreen.</b></span>

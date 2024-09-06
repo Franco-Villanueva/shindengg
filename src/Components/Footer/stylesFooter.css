@@ -1,6 +1,6 @@
 .footer-background {
-  background: linear-gradient(to bottom , #000, #3b2c3b); /* Degradado diagonal de rosa a negro */
-  padding: 2rem 0rem;
+  background: linear-gradient(to bottom , #1b1a1b, #3b2c3b); /* Degradado diagonal de rosa a negro */
+  padding-block: 10rem 1rem ;
 }
 .blurf {
   -webkit-backdrop-filter: blur(10px);
