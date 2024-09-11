@@ -30,13 +30,13 @@ const Navbar = () => {
                 <div className='flex flex-row justify-around'>
                     <ul className='hidden md:flex flex-row space-x-8 items-center pc:mx-16 '>
                         <li>
-                            <a to="/nosotros" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>NOSOTROS</a>
+                            <a to="/nosotros" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>CALENDARIO</a>
                         </li>
                         <li>
-                            <Link to="/teams" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>EQUIPOS</Link>
+                            <a to="/nosotros" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>TIENDA</a>
                         </li>
                         <li>
-                            <a to="/contacto" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>CONTACTO</a>
+                            <Link to="/teams" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>TEAMS</Link>
                         </li>
                         <li>
                             <Link to="/news" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>NOTICIAS</Link>

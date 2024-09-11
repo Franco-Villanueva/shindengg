@@ -16,7 +16,7 @@ const App = () => {
       <AnimatePresence mode="wait"> {/* Cambiar exitBeforeEnter a mode="wait" */}
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<PageTransition><MainPage /></PageTransition>} />
-          <Route path="/teams" element={<PageTransition><TeamsPage /></PageTransition>} />
+          <Route path="/teams/*" element={<PageTransition><TeamsPage /></PageTransition>} />
           <Route path="/news" element={<PageTransition><NewsPage /></PageTransition>} />
         </Routes>
       </AnimatePresence>

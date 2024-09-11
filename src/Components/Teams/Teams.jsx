@@ -1,8 +1,8 @@
 import React from "react";
-import teams from './jsonT';
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 
-const Teams = () => {
+const Teams = ({teams}) => {
 
     const newsVariants = {
         hidden: { scale: 0, opacity: 0 }, // Inicia con escala 0 (totalmente reducido) y opacidad 0
@@ -13,10 +13,11 @@ const Teams = () => {
         <>
         <section className="relative px-4 md:px-14 lg:px-24 xl:px-52">
         <h2 className="mx-4 md:mx-8 lg:mx-12 xl:mx-16 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
-            EQUIPOS
+            TEAMS
         </h2>
             <div className="flex flex-wrap justify-center md:justify-between w-full h-full p-16">
                 {teams?.map((item) => (
+                    <Link to={`${item.id}`} key={item.id}>
                     <motion.div
                         key={item.id}
                         className="
@@ -39,6 +40,7 @@ const Teams = () => {
                             className="w-full h-full object-contain p-5" 
                         />
                     </motion.div>
+                    </Link>
                 ))}
             </div>
         </section>
