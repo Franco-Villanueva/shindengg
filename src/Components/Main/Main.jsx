@@ -2,13 +2,12 @@ import React from 'react';
 import fondo from '../../assets/fondo3.jpeg';
 import logo from '../../assets/logo2.png';
 import text from '../../assets/Logo-largoW.png'
-import Footer from '../Footer/Footer';
-import News from '../News/News';
+
 
 const Main = () => {
     return ( 
         <>
-        <main className='h-screen w-screen items-center justify-between px-16 mx-2 rounded-full xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6'>
+        <main className='h-screen w-screen items-center justify-between px-16 mx-2 xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6'>
             
             {/* Contenido central */}
             <div className="relative flex flex-col items-center justify-center md:flex-row md:items-center md:justify-between h-full text-white">

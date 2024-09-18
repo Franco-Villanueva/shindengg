@@ -37,11 +37,11 @@ const News = ({ showLoadMoreButton }) => {
     };
 
     return (
-        <section className="relative px-4 md:px-14 lg:px-24 xl:px-52 py-10 bg-transparent bg-opacity-90">
-            <h2 className="mx-4 md:mx-8 lg:mx-12 xl:mx-16 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
+        <section className="relative flex flex-col justify-center pt-36 pb-5 px-16 mx-2 xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6">
+            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
                 NOTICIAS
             </h2>
-            <div className={`mx-16 grid ${columns} gap-6`}>
+            <div className={`grid ${columns} gap-6`}>
                 {news?.slice(0, visibleNews).map((item) => (
                     <motion.div
                         key={item.id}

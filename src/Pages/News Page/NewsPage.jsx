@@ -10,7 +10,7 @@ const NewsPage = () => {
     }, []);
 
     return ( 
-        <div className="relative w-full min-h-screen flex justify-center items-center py-44">
+        <section className=" relative w-full min-h-screen flex">
             {/* Capa del fondo con desenfoque */}
             <div 
                 className="absolute inset-0 bg-cover bg-center"
@@ -26,10 +26,12 @@ const NewsPage = () => {
             <div className="absolute inset-0 bg-black opacity-75"></div>
 
             {/* Contenido principal */}
-            <div className="relative">
+
                 <News showLoadMoreButton={true} />
-            </div>
-        </div>
+
+                
+
+        </section>
     );
 }
 

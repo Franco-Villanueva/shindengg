@@ -24,11 +24,13 @@ const Navbar = () => {
         <>  
         <div className="relative w-full">
             <nav className="navbar fixed top-0 left-0 right-0 flex flex-row items-center justify-between px-16 py-6 my-7 mx-2 rounded-full xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6" >
+                <Link to={'/'}>
                 <figure className='flex items-center w-16 h-16'>
                     <img src={logo} alt="Logo Shinden" className='neon-logo' />
                 </figure>
+                </Link>
                 <div className='flex flex-row justify-around'>
-                    <ul className='hidden md:flex flex-row space-x-8 items-center pc:mx-16 '>
+                    <ul className='hidden md:flex flex-row space-x-8 items-center xl:mx-16 '>
                         <li>
                             <a to="/nosotros" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>CALENDARIO</a>
                         </li>
@@ -54,7 +56,7 @@ const Navbar = () => {
                     </button>
 
                     
-                    <ul className='hidden pc:flex flex-row space-x-8 items-center'>
+                    <ul className='hidden xl:flex flex-row space-x-8 items-center'>
                         <li>
                             <a className='transition-transform duration-300 ease-in-out transform hover:scale-125 flex items-center justify-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
