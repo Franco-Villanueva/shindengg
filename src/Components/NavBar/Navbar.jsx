@@ -1,7 +1,6 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/Logo_B.png'
 import './styles.css'; 
 
 const Navbar = () => {
@@ -22,20 +21,20 @@ const Navbar = () => {
 
     return ( 
         <>  
-        <div className="relative w-full">
+        <div className="relative w-full z-50">
             <nav className="navbar fixed top-0 left-0 right-0 flex flex-row items-center justify-between px-16 py-6 my-7 mx-2 rounded-full xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6" >
                 <Link to={'/'}>
                 <figure className='flex items-center w-16 h-16'>
-                    <img src={logo} alt="Logo Shinden" className='neon-logo' />
+                    <img src='https://res.cloudinary.com/df21bcvs0/image/upload/v1726685923/Logos%20shindengg/mkmaixtljrwfu16bxjul.png' alt="Logo Shinden" className='neon-logo' />
                 </figure>
                 </Link>
                 <div className='flex flex-row justify-around'>
                     <ul className='hidden md:flex flex-row space-x-8 items-center xl:mx-16 '>
                         <li>
-                            <a to="/nosotros" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>CALENDARIO</a>
+                            <Link to="/calendary" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>CALENDARIO</Link>
                         </li>
                         <li>
-                            <a to="/nosotros" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>TIENDA</a>
+                            <Link to="/shop" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>TIENDA</Link>
                         </li>
                         <li>
                             <Link to="/teams" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>TEAMS</Link>
@@ -95,15 +94,15 @@ const Navbar = () => {
                             <ul className="flex flex-col space-y-10 py-8 items-center ">
                                 <span className='text-xl p-0 m-0 text-white '>Menu</span>
                                 <li>
-                                <a to="/nosotros" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>NOSOTROS</a>
+                                <Link onClick={() => handleSectionClick('/calendary')} to="/calendary" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>CALENDARIO</Link>
                                 </li>
                                 <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
                                 <li>
-                                <Link onClick={() => handleSectionClick('/teams')} to="/teams" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>EQUIPOS</Link>
+                                <Link onClick={() => handleSectionClick('/shop')} to="/shop" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>TIENDA</Link>
                                 </li>
                                 <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
                                 <li>
-                                <a to="/contacto" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>CONTACTO</a>
+                                <Link onClick={() => handleSectionClick('/teams')} to="/teams" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>TEAMS</Link>
                                 </li>
                                 <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
                                 <li>

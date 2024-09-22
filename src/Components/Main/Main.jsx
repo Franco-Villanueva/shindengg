@@ -1,7 +1,5 @@
 import React from 'react';
-import fondo from '../../assets/fondo3.jpeg';
-import logo from '../../assets/logo2.png';
-import text from '../../assets/Logo-largoW.png'
+import { Link } from 'react-router-dom';
 
 
 const Main = () => {
@@ -14,7 +12,7 @@ const Main = () => {
                 {/* Sección de encabezado */}
                 <header className="text-center md:text-left flex flex-col items-center md:items-start">
                     <img
-                        src={text}   // Reemplaza con la ruta de tu imagen 
+                        src='https://res.cloudinary.com/df21bcvs0/image/upload/v1726685923/Logos%20shindengg/mhiu9fcdpc8aqbvgwsxt.png'   // Reemplaza con la ruta de tu imagen 
                         alt="Shindengg"   // Texto alternativo para accesibilidad 
                         className="w-64 md:w-72 lg:w-80 xl:w-[600px] h-auto"
                     />
@@ -22,14 +20,14 @@ const Main = () => {
                         Somos un equipo de eSports apasionado y dedicado, comprometido a llevar la competición al siguiente nivel. En Shindengg, creemos en la excelencia, el trabajo en equipo y la perseverancia. Únete a nosotros en nuestra aventura para dominar la escena de los eSports.
                     </p>
                     {/* Botón de llamada a la acción */}
-                    <button className="bg-[#f9b6f9] hover:bg-rose-300 text-white font-bold py-2 px-4 rounded-full mt-4">
+                    <Link to={'/teams'} className="bg-[#f9b6f9] hover:bg-rose-300 text-white font-bold py-2 px-4 rounded-full mt-4">
                         Ver equipos &gt;&gt;
-                    </button>
+                    </Link>
                 </header>
                 
                 {/* Logo del equipo */}
                 <figure className="flex justify-center mt-8 md:mt-0">
-                    <img src={logo} alt="logo shindengg" className="w-16 h-16 md:w-40 md:h-40 lg:w-64 lg:h-64 xl:w-96 xl:h-96 object-contain" />
+                    <img src='https://res.cloudinary.com/df21bcvs0/image/upload/v1726685923/Logos%20shindengg/jekedbtyacnawdbs052f.webp' alt="logo shindengg" className="w-16 h-16 md:w-40 md:h-40 lg:w-64 lg:h-64 xl:w-96 xl:h-96 object-contain" />
                 </figure>
             </div>
 

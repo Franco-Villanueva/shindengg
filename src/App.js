@@ -5,6 +5,8 @@ import NewsPage from './Pages/News Page/NewsPage';
 import Navbar from './Components/NavBar/Navbar';
 import TeamsPage from './Pages/Teams Page/TeamsPage';
 import MainPage from './Pages/Main Page/MainPage';
+import ShopPage from './Pages/Shop Page/ShopPage';
+import CalendaryPage from './Pages/Calendary Page/CalendaryPage';
 
 const App = () => {
   const location = useLocation(); // Obtén la ubicación actual para detectar cambios de ruta
@@ -12,12 +14,15 @@ const App = () => {
   return (
     <>
     <div style={{ overflowX: 'hidden' }}> 
-      <Navbar />
-      <AnimatePresence mode="wait"> {/* Cambiar exitBeforeEnter a mode="wait" */}
+      <AnimatePresence mode="wait">
+        <Navbar />
+       {/* Cambiar exitBeforeEnter a mode="wait" */}
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<PageTransition><MainPage /></PageTransition>} />
           <Route path="/teams/*" element={<PageTransition><TeamsPage /></PageTransition>} />
           <Route path="/news" element={<PageTransition><NewsPage /></PageTransition>} />
+          <Route path="/shop" element={<PageTransition><ShopPage /></PageTransition>} />
+          <Route path="/calendary" element={<PageTransition><CalendaryPage /></PageTransition>} />
         </Routes>
       </AnimatePresence>
     </div>
@@ -32,7 +37,7 @@ const PageTransition = ({ children }) => (
     initial={{ opacity: 0, x: -50 }} // Comienza con la opacidad en 0 y se desplaza a la izquierda
     animate={{ opacity: 1, x: 0 }} // Termina con la opacidad en 1 y sin desplazamiento
     exit={{ opacity: 0, x: 50 }} // Desvanece y desplaza a la derecha al salir
-    transition={{ duration: 0.5 }} // Duración de la animación
+    transition={{ duration: 0.7 }} // Duración de la animación
   >
     {children}
   </motion.div>

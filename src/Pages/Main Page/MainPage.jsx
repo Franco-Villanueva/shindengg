@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Main from '../../Components/Main/Main'
-import Background from '../../assets/fondo3.jpeg';
 import News from '../../Components/News/News';
 import Footer from '../../Components/Footer/Footer';
 
@@ -19,7 +18,7 @@ const MainPage = () => {
             <div 
                 className="absolute inset-0 bg-cover bg-center w-screen h-screen opacity-35"
                 style={{
-                    backgroundImage: `url(${Background})`,
+                    backgroundImage: `url(https://res.cloudinary.com/df21bcvs0/image/upload/v1726685959/Fondos%20shindengg/ahiwkqityp5iwgdknryw.jpg)`,
                 }}
             ></div>
 

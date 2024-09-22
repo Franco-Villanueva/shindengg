@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Background from '../../assets/fondo2.jpeg';
 import Teams from '../../Components/Teams/Teams';
 import { Route, Routes } from 'react-router-dom';
 import TeamDetail from '../../Components/Teams/TeamDetail/TeamDetail';
@@ -37,7 +36,7 @@ const TeamsPage = () => {
             <div 
                 className="absolute h-auto inset-0 bg-cover bg-center object-contain blur-sm opacity-40"
                 style={{
-                    backgroundImage: `url(${Background})`,
+                    backgroundImage: `url(https://res.cloudinary.com/df21bcvs0/image/upload/v1726685959/Fondos%20shindengg/ag1zaq3oxqcqplenxfgz.webp)`,
                     filter: 'blur(10px)'  
                 }}
             ></div>
@@ -51,7 +50,7 @@ const TeamsPage = () => {
             <Routes>
                 <Route path="/" element={<div className="relative w-full h-full"><Teams teams={teams} /></div>} />
                 <Route path=":id" element={<div className="relative w-full h-full"><TeamDetail /></div>} />
-                {/* <Route path=":id/player" element={<PlayerDetail />} /> */}
+                
             </Routes>
         </div>
     );

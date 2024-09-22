@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import News from "../../Components/News/News";
+import Shop from '../../Components/Shop/Shop';
 
-const NewsPage = () => {
+const ShopPage = () => {
     
     useEffect(() => {
         
@@ -21,12 +21,11 @@ const NewsPage = () => {
                 }}
             ></div>
             
-            {/* Capa superpuesta para oscurecer la imagen de fondo */}
             <div className="absolute inset-0 bg-black opacity-75"></div>
 
-            {/* Contenido principal */}
 
-                <News showLoadMoreButton={true} />
+
+                <Shop />
 
                 
 
@@ -34,4 +33,4 @@ const NewsPage = () => {
     );
 }
 
-export default NewsPage;
+export default ShopPage;

@@ -26,7 +26,7 @@ const Teams = ({ teams = [] }) => { // Si teams es undefined, lo convertimos en 
                         <motion.div
                             key={item.id}
                             className="
-                                bg-[#ffffff23] rounded-3xl flex flex-col items-center justify-center text-center overflow-hidden cursor-pointer m-2
+                                bg-[#1b1a1b] rounded-3xl flex flex-col items-center justify-center text-center overflow-hidden cursor-pointer m-2
                                 h-36 w-36     
                                 sm:h-36 sm:w-36  
                                 md:h-40 md:w-40  
@@ -40,8 +40,8 @@ const Teams = ({ teams = [] }) => { // Si teams es undefined, lo convertimos en 
                             transition={{ duration: 0.5, ease: "easeOut" }}
                         >
                             <img 
-                                src={item.img} 
-                                alt={item.game} 
+                                src={item.Game.img} 
+                                alt={item.Game.name} 
                                 className="w-full h-full object-contain p-5" 
                             />
                         </motion.div>
