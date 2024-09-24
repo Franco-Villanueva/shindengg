@@ -48,8 +48,8 @@ const Calendary = () => {
             key={month}
             layout
             onClick={() => handleMonthClick(month)}
-            className={`bg-[#1b1a1b] p-5 lg:p-12 xl:p-12 rounded-3xl cursor-pointer ${selectedMonth === month
-              ? 'absolute inset-0 z-10 h- w-100' 
+            className={`bg-[#1b1a1b] p-5 lg:p-12 xl:p-12 rounded-3xl cursor-pointer scrollbar-custom scrollbar-container ${selectedMonth === month
+              ? 'absolute inset-0 z-10 h-100 w-100 overflow-y-auto m-0' 
               : 'text-center'} `}
             initial={{ opacity: 0 }}
             animate={{ opacity: selectedMonth === month || !selectedMonth ? 1 : 0 }}

@@ -28,4 +28,28 @@ code {
     monospace;
 }
 
+@layer utilities {
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: #1b1a1b; /* Color del track */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #f9b6f9; /* Color del thumb */
+    border-radius: 10px;
+    border: 2px solid #1b1a1b; /* Borde del thumb */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background-color: #ff79ff; /* Color del thumb al hacer hover */
+  }
+}
+
+.scrollbar-container {
+  padding-right: 20px; /* Añadir espacio entre el contenido y el scrollbar */
+  margin-right: -12px; /* Ajustar la posición del scrollbar */
+}
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const MatchCard = ({ date, competition, teamA, teamAImg, teamB, teamBImg, score }) => {
   return (
-    <div className="mb-6 p-4 bg-[#db8282] rounded-lg shadow-md flex flex-col justify-between">
+    <div className="mb-6 p-4 bg-[#ffffff23] rounded-lg shadow-sm flex flex-col justify-between">
       {/* Header con la fecha y la competición */}
       <div className="flex justify-between items-center mb-4">
         <div className="flex items-center">
