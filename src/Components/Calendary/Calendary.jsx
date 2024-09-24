@@ -41,7 +41,7 @@ const Calendary = () => {
       <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-[#f9b6f9]'>Calendario</h2>
       <div
         layout
-        className={`relative min-h-96 h-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 w-full transition-all duration-500`}
+        className={`relative min-h-96 w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4`}
         >
         {months?.map((month) => (
           <motion.div
@@ -49,7 +49,7 @@ const Calendary = () => {
             layout
             onClick={() => handleMonthClick(month)}
             className={`bg-[#1b1a1b] p-5 lg:p-12 xl:p-12 rounded-3xl cursor-pointer scrollbar-custom scrollbar-container ${selectedMonth === month
-              ? 'absolute inset-0 z-10 h-100 w-100 overflow-y-auto m-0' 
+              ? 'absolute inset-0 z-10 h-100 w-100 overflow-y-auto' 
               : 'text-center'} `}
             initial={{ opacity: 0 }}
             animate={{ opacity: selectedMonth === month || !selectedMonth ? 1 : 0 }}
