@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import MatchCard from '../MatchCard/MatchCard'; // Importa el componente
+import MatchList from '../MatchCard/MatchList'; // Importar el componente MatchList
 
 const months = [
   'Enero', 'Febrero', 'Marzo', 'Abril', 
@@ -8,29 +8,31 @@ const months = [
   'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
 ];
 
-// Datos de partidos por mes con información detallada
-const matchesByMonth = {
-  Enero: [
-    { game: 'CS2', competition: 'Tournament 1', date: '2024-01-15', teamA: 'Shindengg', teamB: 'Team A', result: '3-2' },
-    { game: 'Valorant', competition: 'Tournament 2', date: '2024-01-22', teamA: 'Shindengg', teamB: 'Team B', result: '2-0' },
-    { game: 'CS2', competition: 'Tournament 1', date: '2024-01-15', teamA: 'Shindengg', teamB: 'Team A', result: '3-2' },
-    { game: 'CS2', competition: 'Tournament 1', date: '2024-01-15', teamA: 'Shindengg', teamB: 'Team A', result: '3-2' },
-    { game: 'Valorant', competition: 'Tournament 2', date: '2024-01-22', teamA: 'Shindengg', teamB: 'Team B', result: '2-0' },
-    { game: 'CS2', competition: 'Tournament 1', date: '2024-01-15', teamA: 'Shindengg', teamB: 'Team A', result: '3-2' },
-    
-
-  ],
-  Febrero: [
-    { game: 'Fortnite', competition: 'World Cup', date: '2024-02-12', teamA: 'Shindengg', teamB: 'Team C', result: '1st Place' }
-  ],
-  Septiembre: [
-    { game: 'CS2', competition: 'Major Tournament', date: '2024-09-15', teamA: 'Shindengg', teamB: 'Team D', result: '3-1' }
-  ],
-  Abril: [],
-};
-
 const Calendary = () => {
   const [selectedMonth, setSelectedMonth] = useState(null);
+  const [matches, setMatches] = useState({});
+
+  useEffect(() => {
+    const fetchMatches = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/api/matchs');
+        const data = await response.json();
+
+        const groupedMatches = data.reduce((acc, match) => {
+          const monthName = months[new Date(match.date).getMonth()];
+          if (!acc[monthName]) acc[monthName] = [];
+          acc[monthName].push(match);
+          return acc;
+        }, {});
+
+        setMatches(groupedMatches);
+      } catch (error) {
+        console.error('Error fetching matches:', error);
+      }
+    };
+
+    fetchMatches();
+  }, []);
 
   const handleMonthClick = (month) => {
     setSelectedMonth(month === selectedMonth ? null : month);
@@ -43,12 +45,12 @@ const Calendary = () => {
         layout
         className={`relative min-h-96 w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4`}
         >
-        {months?.map((month) => (
+        {months.map((month) => (
           <motion.div
             key={month}
             layout
             onClick={() => handleMonthClick(month)}
-            className={`bg-[#1b1a1b] p-5 lg:p-12 xl:p-12 rounded-3xl cursor-pointer scrollbar-custom scrollbar-container ${selectedMonth === month
+            className={`bg-[#1b1a1b] p-5 lg:p-12 xl:p-12 rounded-3xl cursor-pointer scrollbar-custom ${selectedMonth === month
               ? 'absolute inset-0 z-10 h-100 w-100 overflow-y-auto' 
               : 'text-center'} `}
             initial={{ opacity: 0 }}
@@ -59,22 +61,10 @@ const Calendary = () => {
               ${month === months[new Date().getMonth()] ? 'text-[#f9b6f9]' : 'text-[#f0f0f0]'}`}>
               {month}
             </span>
-            {/* Mostrar los partidos del mes seleccionado */}
-            {selectedMonth === month && matchesByMonth[month] && (
-              <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                {matchesByMonth[month].map((match, index) => (
-                  <MatchCard
-                    key={index}
-                    date={match.date}
-                    competition={{ name: match.competition, logo: 'path/to/logo.png' }} // Cambia según tu estructura
-                    teamA={match.teamA}
-                    teamAImg={match.teamAImg}
-                    teamB={match.teamB}
-                    teamBImg={match.teamBImg}
-                    score={match.result}
-                  />
-                ))}
-              </div>
+
+            {/* Mostrar los partidos del mes seleccionado usando MatchList */}
+            {selectedMonth === month && (
+              <MatchList matches={matches[month] || []} />
             )}
           </motion.div>
         ))}
