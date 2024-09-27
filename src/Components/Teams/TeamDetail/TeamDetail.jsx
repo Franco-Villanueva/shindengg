@@ -81,7 +81,7 @@ const TeamDetail = () => {
                         <div className="grid grid-cols-2 gap-10 text-lg items-center my-3">
                             
                             <div className="flex flex-col">
-                                <span className="text-xs font-semibold sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f9b6f9]">Nacionalida:</span>
+                                <span className="text-xs font-semibold sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f9b6f9]">Nacionalidad:</span>
                                 <span className="text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f0f0f0]">{selectPlayer.nationality}</span>
                             </div>
                             <div className="flex flex-col">
