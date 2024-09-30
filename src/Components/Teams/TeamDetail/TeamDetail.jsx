@@ -38,7 +38,7 @@ const TeamDetail = () => {
     return ( 
         <>
         <section className="h-full lg:h-screen xl:h-screen w-100 flex flex-col justify-center px-1 lg:px-16 xl:px-16  mx-2 xl:mx-52 lg:mx-24 md:mx-28 sm:mx-6 my-44 lg:my-0 xl:my-0">
-        <h2 className="text-4xl font-bold text-center mb-12 text-[#f0f0f0]">{team.name}</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-[#f0f0f0]">TEAM {team.Game?.name.toUpperCase()}</h2>
             <div className=" flex flex-col lg:flex-row sm:flex-col md:flex-col lg:space-x-5 h-auto justify-between">
 
                 <div className="bg-[#1b1a1b] p-5 rounded-3xl w-full lg:w-1/3  mb-5 lg:mb-0 space-y-2">
@@ -50,11 +50,11 @@ const TeamDetail = () => {
                         
                         <img src={player.img} alt="player" className="w-10 h-10 rounded-full bg-slate-600 mr-2" />
 
-                        <div className="flex flex-col py-2 items-center">
+                        <div className="flex flex-col py-2">
                             <div>
-                                <span className={`text-sm ${selectPlayer.id === player.id ? 'text-[#1b1a1b]' : 'text-[#f0f0f0]'}`}>{player.name}</span><span className={` text-sm ${selectPlayer.id === player.id ? 'text-[#1b1a1b]' : 'text-[#f0f0f0]'}`}>'{player.nick}'</span>
+                                <span className={`text-sm ${selectPlayer.id === player.id ? 'text-[#1b1a1b]' : 'text-[#f0f0f0]'}`}>{player.name}</span><span className={` text-sm ${selectPlayer.id === player.id ? 'text-[#1b1a1b]' : 'text-[#f0f0f0]'}`}> '{player.nick}'</span>
                             </div>
-                            <span className={` text-xs ${selectPlayer.id === player.id ? 'text-[#1b1a1b]' : 'text-[#f0f0f0]'}`}>{player.role}</span>
+                            <span className={`text-start text-xs font-bold ${selectPlayer.id === player.id ? 'text-[#1b1a1b]' : 'text-[#f0f0f0]'}`}>{player.role}</span>
                         </div>
                         
                         
@@ -81,21 +81,23 @@ const TeamDetail = () => {
                         <div className="grid grid-cols-2 gap-10 text-lg items-center my-3">
                             
                             <div className="flex flex-col">
-                                <span className="text-xs font-semibold sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f9b6f9]">Nacionalidad:</span>
+                                <span className="text-xs font-semibold sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f9b6f9]">EDAD</span>
+                                <span className="text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-[#f0f0f0]">{selectPlayer.age}</span>
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-xs font-semibold sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f9b6f9]">NACIONALIDAD</span>
                                 <span className="text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f0f0f0]">{selectPlayer.nationality}</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className=" text-xs font-semibold sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f9b6f9]">rol:</span>
+                                <span className=" text-xs font-semibold sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f9b6f9]">ROL</span>
                                 <span className="text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f0f0f0]">{selectPlayer.role}</span>
                             </div>
+                            
                             <div className="flex flex-col">
-                                <span className=" text-xs font-semibold sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f9b6f9]">redes:</span>
+                                <span className=" text-xs font-semibold sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f9b6f9]">SOCIAL</span>
                                 <span className="text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-[#f0f0f0]">icon icon icon</span>
                             </div>
-                            <div className="flex flex-col">
-                                <span className="text-xs font-semibold sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f9b6f9]">edad:</span>
-                                <span className="text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-[#f0f0f0]">{selectPlayer.age}</span>
-                            </div>
+                            
                         </div>
                         
                         

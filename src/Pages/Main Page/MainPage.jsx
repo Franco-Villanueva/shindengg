@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Main from '../../Components/Main/Main'
 import News from '../../Components/News/News';
 import Footer from '../../Components/Footer/Footer';
+import Discord from '../../Components/Discord/Discord';
 
 const MainPage = () => {
     
@@ -27,6 +28,9 @@ const MainPage = () => {
         </section>
         <section>
         <News />
+        </section>
+        <section>
+            <Discord />
         </section>
         <section>
         <Footer />

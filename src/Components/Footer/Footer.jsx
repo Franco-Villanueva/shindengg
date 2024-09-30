@@ -53,7 +53,7 @@ const Footer = () => {
             <div className="flex flex-col justify-between items-center space-y-4 md:space-y-0">
 
               {/* Redes Sociales */}
-              <ul className='hidden pc:flex flex-row space-x-8 items-center mb-5'>
+              <ul className='flex flex-row space-x-8 items-center mb-5'>
                           <li>
                           <a className='transition-transform duration-300 ease-in-out transform hover:scale-125 flex items-center justify-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
