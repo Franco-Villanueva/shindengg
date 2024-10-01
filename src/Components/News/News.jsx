@@ -37,8 +37,8 @@ const News = ({ showLoadMoreButton }) => {
     };
 
     return (
-        <section className="relative flex flex-col justify-center pt-36 pb-5 px-16 mx-2 xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6">
-            <h2 className="text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
+        <section className="relative flex flex-col justify-center pt-36 pb-5 px-16 mx-2 2xl:mx-52 lg:mx-14 md:mx-14 sm:mx-6">
+            <h2 className="font-oswald text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
                 NOTICIAS
             </h2>
             <div className={`grid ${columns} gap-6`}>
@@ -64,7 +64,7 @@ const News = ({ showLoadMoreButton }) => {
                 </div>
             )}
             {showLoadMoreButton && visibleNews >= news.length && (
-                <span className="text-white mt-6 block text-center">No hay más noticias</span>
+                <span className="font-oswald text-center text-2xl font-bold text-[#f9b6f9] pt-5">No hay más noticias</span>
             )}
         </section>
     );

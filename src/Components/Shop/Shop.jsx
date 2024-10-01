@@ -1,8 +1,8 @@
 const Shop = () => {
     return ( 
 
-        <section className="relative flex flex-col justify-center pt-36 pb-5 px-16 mx-2 xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6">
-            <h1 className="bg-white text-black">Proximamente</h1> 
+        <section className="h-screen w-100 flex flex-col justify-center pt-16 px-16 mx-2 xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6">
+            <h1 className="font-oswald text-center text-5xl font-bold text-[#f9b6f9]">Proximamente</h1> 
         </section>
      );
 }

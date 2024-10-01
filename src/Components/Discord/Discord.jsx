@@ -2,9 +2,9 @@ const Discord = () => {
     return ( 
 
         <div className="flex items-center justify-center min-h-96 bg-[#1b1a1b] p-2 pt-16 xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6">
-        <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-5xl bg-[#ffffff09] rounded-3xl p-8 space-y-6 md:space-y-0 md:space-x-8">
+        <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-5xl bg-[linear-gradient(0deg,_#0000_0%,_#ffffff1a_100%)] rounded-3xl p-8 space-y-6 md:space-y-0 md:space-x-8">
             <div className="text-left space-y-4 max-w-lg">
-            <h2 className="text-3xl font-bold text-white">
+            <h2 className="font-oswald text-3xl font-bold text-white">
                 ÚNETE A NUESTRA COMUNIDAD DE DISCORD
             </h2>
             <p className="text-lg text-gray-300">
@@ -15,7 +15,7 @@ const Discord = () => {
             
                             
             
-            <span>Unirse ahora</span>
+            <span className="font-oswald">Unirse ahora</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
                                 <g fill="#1b1a1b">
                                 <g transform="scale(5.12,5.12)">

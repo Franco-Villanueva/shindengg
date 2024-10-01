@@ -18,8 +18,8 @@ const MatchCard = ({ date, competition, teamA, akaA, teamAImg, teamB, akaB, team
         
         {/* Información de la fecha debajo de la competencia */}
         <div className="flex flex-col justify-end items-end">
-          <span className="text-lg md:text-lg lg:text-xl text-[#f9b6f9] font-semibold">{competition.name}</span>
-          <span className="text-xs text-gray-400">{fechaFormateada} {monthName} - {horaFormateada}</span>
+          <span className="font-oswald text-lg md:text-lg lg:text-xl text-[#f9b6f9] font-semibold">{competition.name}</span>
+          <span className="text-sm text-gray-400">{fechaFormateada} {monthName} - {horaFormateada}</span>
         </div>
       </div>
       <hr className="border-gray-700 mb-4" />
@@ -32,17 +32,17 @@ const MatchCard = ({ date, competition, teamA, akaA, teamAImg, teamB, akaB, team
             <div className='flex flex-row items-center'>
               <img src={player.team.logo} alt={player.team.name} className="bg-[#f9b6f9] w-14 h-14 rounded-full border border-[#f9b6f9] mr-2 p-2" />
               <div>
-                <span className="text-sm md:text-sm lg:text-lg text-white font-semibold pr-3">{player.name}</span>
-                <p className="text-xs text-gray-400">{player.team.name}</p> 
+                <span className="font-oswald text-sm md:text-sm lg:text-lg text-white pr-3">{player.name}</span>
+                <p className="text-sm text-gray-400">{player.team.name}</p> 
               </div>
             </div>
 
             <div className="text-white flex flex-wrap flex-row items-center space-x-2 justify-end">
-              <p className="font-semibold text-xs md:text-sm lg:text-base">
-                KILLS: <span className="text-xs md:text-sm lg:text-base text-[#f9b6f9]">{kills}</span> 
+              <p className="font-oswald md:text-sm lg:text-base">
+                KILLS: <span className=" md:text-sm lg:text-base text-[#f9b6f9]">{kills}</span> 
               </p>
-              <p className="font-semibold text-xs md:text-sm lg:text-base">
-                POSICIÓN: <span className="text-xs md:text-sm lg:text-base text-[#f9b6f9]">{position}</span>
+              <p className="font-oswald  md:text-sm lg:text-base">
+                POSICIÓN: <span className=" md:text-sm lg:text-base text-[#f9b6f9]">{position}</span>
               </p>
             </div>
           </div>
@@ -55,19 +55,19 @@ const MatchCard = ({ date, competition, teamA, akaA, teamAImg, teamB, akaB, team
               <img src={teamAImg} alt={teamA} className="bg-[#f9b6f9] w-12 h-12 rounded-full p-2" />
 
               <div>
-                <span className="text-sm md:text-lg lg:text-xl text-white font-semibold">{akaA}</span>
-                <p className="text-xs text-gray-400">{teamA}</p> 
+                <span className="font-oswald text-sm md:text-lg lg:text-xl text-white">{akaA}</span>
+                <p className="text-sm text-gray-400">{teamA}</p> 
               </div>
               
             </div>
-            <div className="text-center mt-2 text-sm md:text-lg lg:text-xl font-bold text-[#f9b6f9]">
+            <div className="font-oswald md:text-lg lg:text-xl font-bold text-[#f9b6f9]">
               {score ? `${score}` : 'Próximo partido'}
             </div>
             {teamB && (
               <div className="flex items-center space-x-2">
-                <div>
-                <span className="text-sm md:text-lg lg:text-xl text-white font-semibold">{akaB}</span>
-                <p className="text-xs text-gray-400">{teamB}</p> 
+                <div className='flex flex-col'>
+                <span className="font-oswald text-sm md:text-lg lg:text-xl text-white text-end">{akaB}</span>
+                <p className="text-sm text-gray-400 text-end">{teamB}</p> 
                 </div>
                 <img src={teamBImg} alt={teamB} className="w-12 h-12 rounded-full border border-[#f9b6f9] p-2" />
               </div>

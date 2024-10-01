@@ -4,7 +4,7 @@ import MatchCard from './MatchCard'; // Importar el componente de tarjetas de pa
 
 const MatchList = ({ matches }) => {
   if (matches.length === 0) {
-    return <p className="text-center text-gray-400 mt-10">No hay partidos programados para este mes.</p>;
+    return <p className="font-oswald text-center text-gray-400 mt-10">No hay partidos programados para este mes.</p>;
    
   }
 

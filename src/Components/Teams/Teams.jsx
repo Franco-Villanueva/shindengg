@@ -16,8 +16,8 @@ const Teams = ({ teams = [] }) => { // Si teams es undefined, lo convertimos en 
     }
 
     return (
-        <section className="h-screen w-100 flex flex-col justify-center pt-16 px-16 mx-2 xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6">
-            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
+        <section className="h-screen w-100 flex flex-col justify-center pt-16 px-16 mx-2 2xl:mx-52 lg:mx-14 md:mx-14 sm:mx-6">
+            <h2 className="font-oswald text-3xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
                 TEAMS
             </h2>
             <div className="flex flex-wrap justify-center md:justify-between">
@@ -26,7 +26,7 @@ const Teams = ({ teams = [] }) => { // Si teams es undefined, lo convertimos en 
                         <motion.div
                             key={item.id}
                             className="
-                                bg-[#1b1a1b] rounded-3xl flex flex-col items-center justify-center text-center overflow-hidden cursor-pointer m-2
+                                bg-[linear-gradient(0deg,_#0000_0%,_#ffffff1d_100%)] rounded-3xl flex flex-col items-center justify-center text-center overflow-hidden cursor-pointer m-2
                                 h-36 w-36     
                                 sm:h-36 sm:w-36  
                                 md:h-40 md:w-40  

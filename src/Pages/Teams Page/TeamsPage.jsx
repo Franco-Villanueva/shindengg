@@ -34,15 +34,15 @@ const TeamsPage = () => {
         <div className="relative w-full h-full overflow-x-hidden">
             {/* Capa del fondo con desenfoque */}
             <div 
-                className="absolute h-auto inset-0 bg-cover bg-center object-contain blur-sm opacity-40"
+                className="absolute h-auto inset-0 bg-cover bg-center object-contain opacity-40"
                 style={{
-                    backgroundImage: `url(https://res.cloudinary.com/df21bcvs0/image/upload/v1726685959/Fondos%20shindengg/ag1zaq3oxqcqplenxfgz.webp)`,
-                    filter: 'blur(10px)'  
+                    backgroundImage: `url(https://res.cloudinary.com/df21bcvs0/image/upload/v1726845984/Fondos%20shindengg/hxvzrg4pduildibf0snk.webp)`,
+                      
                 }}
             ></div>
             
             {/* Capa superpuesta para oscurecer la imagen de fondo */}
-            <div className="absolute inset-0 bg-black opacity-75"></div>
+            <div className="absolute inset-0 bg-black opacity-50"></div>
 
             {/* Contenido principal */}
             

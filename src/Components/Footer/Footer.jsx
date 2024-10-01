@@ -3,10 +3,15 @@ import './stylesFooter.css';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+
+  const ScrollTop = ()=>{
+    window.scrollTo(0, 0);
+  }
+
   return (
     <div className="footer-background"> {/* Contenedor con imagen de fondo */}
 
-      <footer className="blurf rounded-3xl py-6 mx-3 md:mx-14 lg:mx-24 xl:mx-52 ">
+      <footer className="blurf rounded-3xl py-6 mx-3 md:mx-14 lg:mx-14 2xl:mx-52 ">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
 
           {/* Sección superior con logo, navegación y contacto */}
@@ -22,9 +27,9 @@ const Footer = () => {
 
               {/* Navegación en columna */}
               <nav className="flex flex-col space-y-2" aria-label="Navegación principal">
-                <h2 className="text-[#f9b6f9] text-lg font-bold">Navegación</h2>
+                <h2 className="font-oswald text-[#f9b6f9] text-xl">NAVEGACIÓN</h2>
                 <ul className="flex flex-col space-y-2">
-                  <li><Link to={'/'} className="text-white hover:text-[#f9b6f9]">Inicio</Link></li>
+                  <Link to={'/'} className="text-white hover:text-[#f9b6f9]" onClick={() =>window.scrollTo({ top: 0, behavior: 'smooth'})}>Inicio</Link>
                   <li><Link to={'/calendary'} className="text-white hover:text-[#f9b6f9]">Calendario</Link></li>
                   <li><Link to={'/shop'} className="text-white hover:text-[#f9b6f9]">Shop</Link></li>
                   <li><Link to={'/teams'} className="text-white hover:text-[#f9b6f9]">Teams</Link></li>
@@ -34,7 +39,7 @@ const Footer = () => {
 
               {/* Contacto en columna */}
               <address className="flex flex-col space-y-2 not-italic">
-                <h2 className="text-[#f9b6f9] text-lg font-bold">Contacto</h2>
+                <h2 className="font-oswald text-[#f9b6f9] text-xl">CONTACTO</h2>
                 <ul>
                   <li><span className="text-white hover:text-[#f9b6f9]">Email: <a href="mailto:contacto@shindengg.com">contacto@shindengg.com</a></span></li>
                   <li><span className="text-white hover:text-[#f9b6f9]">Teléfono: <a href="tel:+1234567890">+1 (234) 567-890</a></span></li>

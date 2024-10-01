@@ -22,31 +22,31 @@ const Navbar = () => {
     return ( 
         <>  
         <div className="relative w-full z-50">
-            <nav className="navbar fixed top-0 left-0 right-0 flex flex-row items-center justify-between px-16 py-6 my-7 mx-2 rounded-full xl:mx-52 lg:mx-24 md:mx-14 sm:mx-6" >
+            <nav className="navbar fixed top-0 left-0 right-0 flex flex-row items-center justify-between px-16 py-6 my-7 mx-2 rounded-full sm:mx-6 md:mx-14 xl:mx-14 2xl:mx-52 " >
                 <Link to={'/'}>
                 <figure className='flex items-center w-16 h-16'>
                     <img src='https://res.cloudinary.com/df21bcvs0/image/upload/v1726685923/Logos%20shindengg/mkmaixtljrwfu16bxjul.png' alt="Logo Shinden" className='neon-logo' />
                 </figure>
                 </Link>
                 <div className='flex flex-row justify-around'>
-                    <ul className='hidden md:flex flex-row space-x-8 items-center xl:mx-16 '>
+                    <ul className='hidden md:flex flex-row space-x-8 items-center 2xl:mx-16 '>
                         <li>
-                            <Link to="/calendary" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>CALENDARIO</Link>
+                            <Link to="/calendary" className='font-oswald text-white text-shadow-hover  '>CALENDARIO</Link>
                         </li>
                         <li>
-                            <Link to="/shop" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>TIENDA</Link>
+                            <Link to="/shop" className='font-oswald text-white text-shadow-hover  '>TIENDA</Link>
                         </li>
                         <li>
-                            <Link to="/teams" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>TEAMS</Link>
+                            <Link to="/teams" className='font-oswald text-white text-shadow-hover   '>TEAMS</Link>
                         </li>
                         <li>
-                            <Link to="/news" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>NOTICIAS</Link>
+                            <Link to="/news" className='font-oswald text-white text-shadow-hover '>NOTICIAS</Link>
                         </li>
                     </ul>
 
 
                     <button 
-                        className="block md:hidden  text-white relative p-4 z-10" 
+                        className="block md:hidden text-white relative p-4 z-10" 
                         onClick={handleMenuToggle}
                     >
                         <div className={`transition-transform duration-300 ease-in-out transform ${isMenuOpen ? 'rotate-45 ' : '-my-2'} absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`} style={{width:'24px', height: '2px', backgroundColor: 'currentColor'}} />
@@ -55,7 +55,7 @@ const Navbar = () => {
                     </button>
 
                     
-                    <ul className='hidden xl:flex flex-row space-x-8 items-center'>
+                    <ul className='hidden 2xl:flex flex-row space-x-8 items-center'>
                         <li>
                             <a className='transition-transform duration-300 ease-in-out transform hover:scale-125 flex items-center justify-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
@@ -89,24 +89,24 @@ const Navbar = () => {
 
 
 
-                        <div className={`fixed  md:hidden top-36 left-3 right-3 ${isMenuOpen ? 'flex ' : 'hidden'} navbar justify-center rounded-3xl  `}>
-                        <nav className=" h-100 flex flex-col overflow-x-auto">
-                            <ul className="flex flex-col space-y-10 py-8 items-center ">
-                                <span className='text-xl p-0 m-0 text-white '>Menu</span>
+                        <div className={`fixed md:hidden top-36 left-3 right-3 ${isMenuOpen ? 'flex' : 'hidden'} navbar rounded-3xl `}>
+                        <nav className="h-full flex flex-1 flex-col overflow-y-visible scrollbar-custom">
+                            <ul className="flex flex-col space-y-10 p-8 items-center">
+                                <span className='text-xl p-0 m-0 text-white'>Menú</span>
                                 <li>
-                                <Link onClick={() => handleSectionClick('/calendary')} to="/calendary" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>CALENDARIO</Link>
+                                <Link onClick={() => handleSectionClick('/calendary')} to="/calendary" className='font-oswald text-white text-shadow-hover xl:text-sm '>CALENDARIO</Link>
                                 </li>
                                 <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
                                 <li>
-                                <Link onClick={() => handleSectionClick('/shop')} to="/shop" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>TIENDA</Link>
+                                <Link onClick={() => handleSectionClick('/shop')} to="/shop" className='font-oswald text-white text-shadow-hover  xl:text-sm '>TIENDA</Link>
                                 </li>
                                 <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
                                 <li>
-                                <Link onClick={() => handleSectionClick('/teams')} to="/teams" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>TEAMS</Link>
+                                <Link onClick={() => handleSectionClick('/teams')} to="/teams" className='font-oswald text-white text-shadow-hover  xl:text-sm '>TEAMS</Link>
                                 </li>
                                 <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
                                 <li>
-                                <Link onClick={() => handleSectionClick('/news')} to="/news" className='text-white text-shadow-hover md:text-xs lg:text-s xl:text-m font-bold'>NOTICIAS</Link>
+                                <Link onClick={() => handleSectionClick('/news')} to="/news" className='font-oswald text-white text-shadow-hover  xl:text-sm '>NOTICIAS</Link>
                                 </li>
                                 <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 m-0' />
                                 <li>

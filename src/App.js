@@ -32,15 +32,19 @@ const App = () => {
 };
 
 // Componente de transición de página que usa Framer Motion
-const PageTransition = ({ children }) => (
-  <motion.div
-    initial={{ opacity: 0, x: -50 }} // Comienza con la opacidad en 0 y se desplaza a la izquierda
-    animate={{ opacity: 1, x: 0 }} // Termina con la opacidad en 1 y sin desplazamiento
-    exit={{ opacity: 0, x: 50 }} // Desvanece y desplaza a la derecha al salir
-    transition={{ duration: 0.7 }} // Duración de la animación
-  >
-    {children}
-  </motion.div>
-);
+const PageTransition = ({ children }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }} // Comienza con la opacidad en 0
+      animate={{ opacity: 1 }} // Termina con la opacidad en 1
+      exit={{ opacity: 0 }} // Desvanece al salir
+      transition={{ duration: 0.7 }} // Duración de la animación
+      style={{ position: 'relative', overflow: 'hidden' }} // Asegúrate de que el div sea relativo
+    >
+      {children}
+      
+    </motion.div>
+  );
+};
 
 export default App;

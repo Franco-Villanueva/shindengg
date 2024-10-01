@@ -4,7 +4,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],  // Configura 'Poppins' como la fuente predeterminada
+        sans: ['Poppins', 'sans-serif'],
+        oswald: ['Oswald', 'sans-serif'],
+        nunito: ['Nunito', 'sans-serif'],
+
+      },
+      maskImage: {
+        'gradient-to-bottom': 'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%)',
       },
     }
   },

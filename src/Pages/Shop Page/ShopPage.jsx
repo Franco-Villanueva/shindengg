@@ -24,8 +24,10 @@ const ShopPage = () => {
             <div className="absolute inset-0 bg-black opacity-75"></div>
 
 
-
-                <Shop />
+        <div className="relative w-full h-full">
+            <Shop />    
+        </div>     
+        
 
                 
 
