@@ -35,11 +35,11 @@ const App = () => {
 const PageTransition = ({ children }) => {
   return (
     <motion.div
-      initial={{ opacity: 0 }} // Comienza con la opacidad en 0
-      animate={{ opacity: 1 }} // Termina con la opacidad en 1
-      exit={{ opacity: 0 }} // Desvanece al salir
-      transition={{ duration: 0.7 }} // Duración de la animación
-      style={{ position: 'relative', overflow: 'hidden' }} // Asegúrate de que el div sea relativo
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.7 }}
+      style={{ position: 'relative', overflow: 'hidden' }} 
     >
       {children}
       

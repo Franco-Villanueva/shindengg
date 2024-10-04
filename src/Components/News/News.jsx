@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'; // Importa motion de Framer Motion
-import news from './json';
 
-const News = ({ showLoadMoreButton }) => {
+const News = ({ news , showLoadMoreButton }) => {
     const [columns, setColumns] = useState('grid-cols-1');
     const [visibleNews, setVisibleNews] = useState(2);
 
@@ -37,7 +36,7 @@ const News = ({ showLoadMoreButton }) => {
     };
 
     return (
-        <section className="relative flex flex-col justify-center pt-36 pb-5 px-16 mx-2 2xl:mx-52 lg:mx-14 md:mx-14 sm:mx-6">
+        <section className="relative flex flex-col w-full justify-center pt-36 pb-5 px-16 mx-2 2xl:mx-52 lg:mx-14 md:mx-28 sm:mx-6">
             <h2 className="font-oswald text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
                 NOTICIAS
             </h2>
@@ -51,7 +50,7 @@ const News = ({ showLoadMoreButton }) => {
                         variants={newsVariants} // Variantes de animación definidas
                         transition={{ duration: 0.5, ease: "easeOut" }} // Duración y tipo de transición
                     >
-                        <img src={item.img} alt={item.title} className="w-full h-full object-cover rounded-3xl opacity-25" />
+                        <img src={item.image} alt={item.title} className="w-full h-full object-cover rounded-3xl opacity-25" />
                         <h3 className="absolute text-white font-bold">{item.title}</h3>
                     </motion.div>
                 ))}
