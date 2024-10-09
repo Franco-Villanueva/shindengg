@@ -61,7 +61,8 @@ const News = ({ news , showLoadMoreButton }) => {
                         transition={{ duration: 0.5, ease: "easeOut" }} // Duración y tipo de transición
                         onClick={() => openModal(item)}
                     >
-                        <img src={item.image} alt={item.title} className="w-full h-full object-cover rounded-3xl opacity-25" />
+                        {item.image ? (<img src={item.image} alt={item.title} className="w-full h-full object-cover rounded-3xl opacity-25" />) : null}
+                        
                         <h3 className="absolute text-white font-bold">{item.title}</h3>
                     </motion.button>
                 ))}
@@ -80,14 +81,16 @@ const News = ({ news , showLoadMoreButton }) => {
             {/* Modal */}
             {modalData && (
                 <div className="fixed inset-0 mx-2 rounded-full sm:mx-6 md:mx-14 xl:mx-14 2xl:mx-52 my-10 z-50 bg-black bg-opacity-50">
-                <div className="bg-[#1b1a1b] text-white w-full h-full p-10 rounded-3xl relative">
+                <div className="bg-[#1f1f21] text-white w-full h-full p-10 rounded-3xl relative">
                     <div className='flex flex-row items-center justify-between mb-4'>
                     <h2 className="font-oswald text-xl">{modalData.title}</h2>    
                     <button onClick={closeModal} className=" text-[#f9b6f9] font-bold">X</button>
                     </div>
                     <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 my-8' />
                     <div>
+                    {modalData.image ? (
                         <img src={modalData.image} alt={modalData.title} className="mb-4 w-full h-48 object-cover rounded-lg" />
+                    ) : null}
                         <p>{modalData.body}</p>
                     </div>
                     
