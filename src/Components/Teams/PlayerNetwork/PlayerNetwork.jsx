@@ -15,36 +15,36 @@ const PlayerNetwork = ({ player }) => {
       {/* Renderiza el enlace de Twitter si existe */}
       {xLink && (
         <a
-          className="text-white flex items-center space-x-2 my-2 hover:text-[#f9b6f9]"
+          className="transition-transform duration-300 text-white flex items-center space-x-2  hover:text-[#f9b6f9]"
           href={xLink}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faXTwitter} className="text-2xl" />
+          <FontAwesomeIcon icon={faXTwitter} className="text-xl" />
         </a>
       )}
 
       {/* Renderiza el enlace de Instagram si existe */}
       {instagramLink && (
         <a
-          className="text-white flex items-center space-x-2 my-2"
+          className="transition-transform duration-300 text-white flex items-center space-x-2  hover:text-[#f9b6f9]"
           href={instagramLink}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
+          <FontAwesomeIcon icon={faInstagram} className="text-xl" />
         </a>
       )}
 
       {/* Renderiza el enlace de Twitch si existe */}
       {twitchLink && (
         <a
-          className="text-white flex items-center space-x-2 my-2"
+          className="transition-transform duration-300 text-white flex items-center space-x-2  hover:text-[#f9b6f9]"
           href={twitchLink}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faTwitch} className="text-2xl" />
+          <FontAwesomeIcon icon={faTwitch} className="text-xl" />
         </a>
       )}
 
