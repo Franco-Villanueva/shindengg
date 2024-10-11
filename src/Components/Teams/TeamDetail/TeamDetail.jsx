@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import PlayerNetwork from "../PlayerNetwork/PlayerNetwork";
 
 
 const TeamDetail = () => {
@@ -30,8 +31,8 @@ const TeamDetail = () => {
 
      }, [id]);
     
-    const handlerSelectPlayer = (id) =>{
-        const player = team.players.find(player => player.id === id)
+    const handlerSelectPlayer = (player) =>{
+        console.log(player.network)
         setSelectPlater(player)
     }
 
@@ -45,7 +46,7 @@ const TeamDetail = () => {
 
                     {team.players?.map((player) =>(
                         
-                        <button key={player.id} onClick={()=>handlerSelectPlayer(player.id)} className={`rounded-xl w-full h-auto flex flex-row items-center px-5 transition duration-500 ease-in-out ${selectPlayer.id === player.id ? 'text-black bg-[#f9b6f9]' : 'bg-transparent' }`} >
+                        <button key={player.id} onClick={()=>handlerSelectPlayer(player)} className={`rounded-xl w-full h-auto flex flex-row items-center px-5 transition duration-500 ease-in-out ${selectPlayer.id === player.id ? 'text-black bg-[#f9b6f9]' : 'bg-transparent' }`} >
                         
                         <img src={player.img} alt="player" className="w-10 h-10 rounded-full bg-slate-600 mr-2" />
 
@@ -94,7 +95,7 @@ const TeamDetail = () => {
                             
                             <div className="flex flex-col">
                                 <span className="font-oswald text-xs font-semibold sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f9b6f9]">SOCIAL</span>
-                                <span className="text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-[#f0f0f0]">icon icon icon</span>
+                                <PlayerNetwork player={selectPlayer} />
                             </div>
                             
                         </div>
