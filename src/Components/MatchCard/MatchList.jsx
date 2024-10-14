@@ -4,12 +4,12 @@ import MatchCard from './MatchCard'; // Importar el componente de tarjetas de pa
 
 const MatchList = ({ matches }) => {
   if (matches.length === 0) {
-    return <p className="font-oswald text-center text-gray-400 mt-10">No hay partidos programados para este mes.</p>;
+    return <p className="mt-10 text-center text-gray-400 font-oswald">No hay partidos programados para este mes.</p>;
    
   }
 
   return (
-    <div className="mt-5 grid grid-cols-1 xl:grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 gap-4 mt-5 xl:grid-cols-2">
       {matches.map((match, index) => {
         const isTeamMatch = !!(match.teamA && match.teamB); // Si hay teamA y teamB, es un partido de equipo
 

@@ -27,10 +27,10 @@ const NewsPage = () => {
     }, []);
 
     return ( 
-        <section className="relative w-full min-h-screen flex">
+        <section className="relative flex w-full min-h-screen">
             {/* Capa del fondo con desenfoque */}
             <div 
-                className="absolute inset-0 bg-cover bg-center"
+                className="absolute inset-0 bg-center bg-cover"
                 style={{
                     backgroundImage: `url(https://res.cloudinary.com/df21bcvs0/image/upload/v1726685959/Fondos%20shindengg/q83vdkte2gi4zm74jyas.webp)`,
                     backgroundSize: '100% auto',

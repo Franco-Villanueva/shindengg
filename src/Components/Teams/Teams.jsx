@@ -16,7 +16,7 @@ const Teams = ({ teams = [] }) => { // Si teams es undefined, lo convertimos en 
     }
 
     return (
-        <section className="h-screen w-100 flex flex-col justify-center pt-16 px-16 mx-2 2xl:mx-52 lg:mx-14 md:mx-14 sm:mx-6">
+        <section className="flex flex-col justify-center h-screen px-16 pt-16 mx-2 w-100 2xl:mx-52 lg:mx-14 md:mx-14 sm:mx-6">
             <h2 className="font-oswald text-3xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
                 TEAMS
             </h2>
@@ -42,7 +42,7 @@ const Teams = ({ teams = [] }) => { // Si teams es undefined, lo convertimos en 
                             <img 
                                 src={item.Game.img} 
                                 alt={item.Game.name} 
-                                className="w-full h-full object-contain p-5" 
+                                className="object-contain w-full h-full p-5" 
                             />
                         </motion.div>
                     </Link>

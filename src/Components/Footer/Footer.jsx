@@ -9,19 +9,19 @@ const Footer = () => {
   return (
     <div className="footer-background"> {/* Contenedor con imagen de fondo */}
 
-      <footer className="blurf rounded-3xl py-6 mx-3 md:mx-14 lg:mx-14 2xl:mx-52 ">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16">
+      <footer className="py-6 mx-3 blurf rounded-3xl md:mx-14 lg:mx-14 2xl:mx-52 ">
+        <div className="container px-4 mx-auto md:px-8 lg:px-16">
 
           {/* Sección superior con logo, navegación y contacto */}
-          <div className="flex flex-col md:flex-row justify-between items-start">
+          <div className="flex flex-col items-start justify-between md:flex-row">
 
             {/* Logo de Shindengg */}
             <div className="flex-shrink-0 mb-4 md:mb-0">
-              <img src='https://res.cloudinary.com/df21bcvs0/image/upload/v1726685923/Logos%20shindengg/bblm7jirpdjeojwzmd8z.webp' alt="Shindengg Logo" className="h-24 w-24" />
+              <img src='https://res.cloudinary.com/df21bcvs0/image/upload/v1726685923/Logos%20shindengg/bblm7jirpdjeojwzmd8z.webp' alt="Shindengg Logo" className="w-24 h-24" />
             </div>
 
             {/* Navegación y Contacto en columnas, en la parte superior derecha */}
-            <div className="flex flex-col md:flex-row md:ml-auto space-y-8 md:space-y-0 md:space-x-12">
+            <div className="flex flex-col space-y-8 md:flex-row md:ml-auto md:space-y-0 md:space-x-12">
 
               {/* Navegación en columna */}
               <nav className="flex flex-col space-y-2" aria-label="Navegación principal">
@@ -53,27 +53,27 @@ const Footer = () => {
             <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 my-16' />
 
             {/* Sección inferior con Redes Sociales y Derechos Reservados */}
-            <div className="flex flex-col justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex flex-col items-center justify-between space-y-4 md:space-y-0">
 
               {/* Redes Sociales */}
-              <ul className='flex flex-row space-x-8 items-center mb-5'>
+              <ul className='flex flex-row items-center mb-5 space-x-8'>
                 <li>
-                  <a href="https://discord.com/invite/ukfDYRf3Wm" className='transition-transform duration-300 ease-in-out transform hover:scale-125 flex items-center justify-center' target="_blank" rel="noopener noreferrer">
+                  <a href="https://discord.com/invite/ukfDYRf3Wm" className='flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-125' target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faDiscord} className="text-3xl text-[#f9b6f9]" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/shindengg/" className='transition-transform duration-300 ease-in-out transform hover:scale-125 flex items-center justify-center' target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/shindengg/" className='flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-125' target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faInstagram} className="text-3xl text-[#f9b6f9]" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://x.com/shindengg" className='transition-transform duration-300 ease-in-out transform hover:scale-125 flex items-center justify-center' target="_blank" rel="noopener noreferrer">
+                  <a href="https://x.com/shindengg" className='flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-125' target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faXTwitter} className="text-3xl text-[#f9b6f9]" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.tiktok.com/@shindengg" className='transition-transform duration-300 ease-in-out transform hover:scale-125 flex items-center justify-center' target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.tiktok.com/@shindengg" className='flex items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-125' target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faTiktok} className="text-3xl text-[#f9b6f9]" />
                   </a>
                 </li>

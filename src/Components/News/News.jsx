@@ -46,7 +46,7 @@ const News = ({ news , showLoadMoreButton }) => {
     };
 
     return (
-        <section className="relative flex flex-col w-full justify-center pt-36 pb-5 px-16 mx-2 2xl:mx-52 lg:mx-14 md:mx-28 sm:mx-6">
+        <section className="relative flex flex-col justify-center w-full px-16 pb-5 mx-2 pt-36 2xl:mx-52 lg:mx-14 md:mx-28 sm:mx-6">
             <h2 className="font-oswald text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
                 NOTICIAS
             </h2>
@@ -54,16 +54,16 @@ const News = ({ news , showLoadMoreButton }) => {
                 {news?.slice(0, visibleNews).map((item) => (
                     <motion.button
                         key={item.id}
-                        className="relative h-48 md:h-64 bg-[#f9b6f9ce] rounded-3xl flex flex-col items-center justify-center text-center overflow-hidden cursor-pointer"
+                        className="relative h-48 md:h-64 bg-[#f9b6f9c6] rounded-3xl flex flex-col items-center justify-center text-center overflow-hidden cursor-pointer"
                         initial="hidden" // Estado inicial de la animación
                         animate="visible" // Estado final de la animación
                         variants={newsVariants} // Variantes de animación definidas
                         transition={{ duration: 0.5, ease: "easeOut" }} // Duración y tipo de transición
                         onClick={() => openModal(item)}
                     >
-                        {item.image ? (<img src={item.image} alt={item.title} className="w-full h-full object-cover rounded-3xl opacity-25" />) : null}
+                        {item.image ? (<img src={item.image} alt={item.title} className="object-cover w-full h-full opacity-25 rounded-3xl" />) : (<img src='https://res.cloudinary.com/df21bcvs0/image/upload/v1726685959/Fondos%20shindengg/ag1zaq3oxqcqplenxfgz.webp' alt={item.title} className="object-cover w-full h-full opacity-25 rounded-3xl" />)}
                         
-                        <h3 className="absolute text-white font-bold">{item.title}</h3>
+                        <h3 className="absolute text-xl font-bold text-white">{item.title}</h3>
                     </motion.button>
                 ))}
             </div>
@@ -80,22 +80,35 @@ const News = ({ news , showLoadMoreButton }) => {
 
             {/* Modal */}
             {modalData && (
-                <div className="fixed inset-0 mx-2 rounded-full sm:mx-6 md:mx-14 xl:mx-14 2xl:mx-52 my-10 z-50 bg-black bg-opacity-50">
-                <div className="bg-[#1f1f21] text-white w-full h-full p-10 rounded-3xl relative">
-                    <div className='flex flex-row items-center justify-between mb-4'>
-                    <h2 className="font-oswald text-xl">{modalData.title}</h2>    
+                <div className="fixed inset-0 z-50 mx-2 my-10 bg-black rounded-full sm:mx-6 md:mx-14 xl:mx-14 2xl:mx-52">
+                <div className="bg-[#1f1f21] text-white w-full h-full p-10 rounded-3xl relative max-h-screen flex flex-col">
+                  <div className='flex flex-row items-center justify-between'>
+                    <h2 className="text-3xl font-oswald">{modalData.title}</h2>    
                     <button onClick={closeModal} className=" text-[#f9b6f9] font-bold">X</button>
-                    </div>
-                    <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 my-8' />
-                    <div>
-                    {modalData.image ? (
-                        <img src={modalData.image} alt={modalData.title} className="mb-4 w-full h-48 object-cover rounded-lg" />
-                    ) : null}
-                        <p>{modalData.body}</p>
-                    </div>
-                    
+                  </div>
+                  <p className="text-sm text-gray-400">
+                    {new Date(modalData.date).toLocaleDateString('es-AR', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric',
+                    })}
+                    </p>
+              
+                  <hr className='h-[2px] w-full border-t-0 custom-gradient p-0 my-8' />
+              
+                  {modalData.image ? (
+                    <img src={modalData.image} alt={modalData.title} className="object-cover w-full mb-4 rounded-lg h-52" />
+                  ) : null}
+              
+                  <div className="flex-1 overflow-y-auto scrollbar-custom">
+                    <p className='w-full text-lg break-words'>
+                      {modalData.body}
+                    </p>
+                  </div>
                 </div>
-            </div>
+              </div>
+              
+              
             )}
         </section>
     );

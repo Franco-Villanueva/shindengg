@@ -11,7 +11,7 @@ const CalendaryPage = () => {
     return ( 
         <section className="relative">
             <div 
-                className="absolute h-auto inset-0 bg-cover bg-center object-contain blur-sm opacity-40"
+                className="absolute inset-0 object-contain h-auto bg-center bg-cover blur-sm opacity-40"
                 style={{
                     backgroundImage: `url(https://res.cloudinary.com/df21bcvs0/image/upload/v1726685959/Fondos%20shindengg/ag1zaq3oxqcqplenxfgz.webp)`,
                       

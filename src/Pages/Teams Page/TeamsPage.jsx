@@ -34,7 +34,7 @@ const TeamsPage = () => {
         <div className="relative w-full h-full overflow-x-hidden">
             {/* Capa del fondo con desenfoque */}
             <div 
-                className="absolute h-auto inset-0 bg-cover bg-center object-contain opacity-40"
+                className="absolute inset-0 object-contain h-auto bg-center bg-cover opacity-40"
                 style={{
                     backgroundImage: `url(https://res.cloudinary.com/df21bcvs0/image/upload/v1726845984/Fondos%20shindengg/hxvzrg4pduildibf0snk.webp)`,
                       

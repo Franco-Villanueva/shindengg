@@ -34,11 +34,11 @@ const MainPage = () => {
 
     return (
         <>
-        <section className="relative w-full h-screen flex">
+        <section className="relative flex w-full h-screen">
 
             {/* Capa del fondo con desenfoque */}
             <div 
-                className="absolute inset-0 w-screen h-screen bg-cover bg-center opacity-35"
+                className="absolute inset-0 w-screen h-screen bg-center bg-cover opacity-35"
                 style={{
                     backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, #1b1a1b 100%), url(https://res.cloudinary.com/df21bcvs0/image/upload/v1726685959/Fondos%20shindengg/ahiwkqityp5iwgdknryw.jpg)`,
                 }}
@@ -48,7 +48,7 @@ const MainPage = () => {
           
         </section>
         
-        <section className='relative w-full min-h-screen flex' >
+        <section className='relative flex w-full min-h-screen' >
             <News news={news} />
         </section>
 

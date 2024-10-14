@@ -37,9 +37,9 @@ const TeamDetail = () => {
     }
 
     return ( 
-        <section className="h-full lg:h-screen xl:h-screen w-100 flex flex-col justify-center px-1 lg:px-16 xl:px-16 mx-2 2xl:mx-52 lg:mx-14 md:mx-28 sm:mx-6 my-44 lg:my-0 xl:my-0">
+        <section className="flex flex-col justify-center h-full px-1 mx-2 lg:h-screen xl:h-screen w-100 lg:px-16 xl:px-16 2xl:mx-52 lg:mx-14 md:mx-28 sm:mx-6 my-44 lg:my-0 xl:my-0">
         <h2 className="font-oswald text-4xl font-bold text-center mb-12 text-[#f0f0f0]">TEAM {team.Game?.name.toUpperCase()}</h2>
-            <div className=" flex flex-col lg:flex-row sm:flex-col md:flex-col lg:space-x-5 h-auto justify-between">
+            <div className="flex flex-col justify-between h-auto lg:flex-row sm:flex-col md:flex-col lg:space-x-5">
 
                 <div className="bg-[#1b1a1b] p-5 rounded-3xl w-full lg:w-1/3  mb-5 lg:mb-0 space-y-2">
                     <span className="font-oswald flex text-xl font-bold py-2 text-[#f0f0f0]">Miembros del Equipo</span>
@@ -48,7 +48,7 @@ const TeamDetail = () => {
                         
                         <button key={player.id} onClick={()=>handlerSelectPlayer(player)} className={`rounded-xl w-full h-auto flex flex-row items-center px-5 transition duration-500 ease-in-out ${selectPlayer.id === player.id ? 'text-black bg-[#f9b6f9]' : 'bg-transparent' }`} >
                         
-                        <img src={player.img} alt="player" className="w-10 h-10 rounded-full bg-slate-600 mr-2" />
+                        <img src={player.img} alt="player" className="w-10 h-10 mr-2 rounded-full bg-slate-600" />
 
                         <div className="flex flex-col py-2">
                             <div>
@@ -73,12 +73,12 @@ const TeamDetail = () => {
                     alt="player" 
                     className="mask-gradient w-60 h-60 rounded-full mx-auto lg:mx-0 lg:mr-2 xl:mr-2 bg-[linear-gradient(0deg,_#0000_0%,_#ffffff1a_100%)] my-auto" />
                                 
-                    <div className="flex flex-col m-2 justify-center">
+                    <div className="flex flex-col justify-center m-2">
                         <div className="flex flex-col text-2xl font-bold text-center">
                             <span className="font-oswald text-3xl text-[#f9b6f9]">{selectPlayer.name}</span>
                             <span className="font-oswald text-2xl text-[#f0f0f0]">{selectPlayer.nick}</span>
                         </div>
-                        <div className="grid grid-cols-2 gap-10 text-lg items-center my-3">
+                        <div className="grid items-center grid-cols-2 gap-10 my-3 text-lg">
                             
                             <div className="flex flex-col">
                                 <span className="font-oswald text-xs font-semibold sm:text-xs md:text-sm lg:text-base xl:text-lg  text-[#f9b6f9]">EDAD</span>
