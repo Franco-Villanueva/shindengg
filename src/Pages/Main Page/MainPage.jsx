@@ -3,6 +3,7 @@ import Main from '../../Components/Main/Main'
 import News from '../../Components/News/News';
 import Footer from '../../Components/Footer/Footer';
 import Discord from '../../Components/Discord/Discord';
+import LastVideos from '../../Components/LastVideos/LastVideos';
 
 const MainPage = () => {
 
@@ -50,6 +51,10 @@ const MainPage = () => {
         
         <section className='relative flex w-full min-h-screen' >
             <News news={news} />
+        </section>
+
+        <section >
+            <LastVideos />
         </section>
 
         <section>
