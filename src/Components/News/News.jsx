@@ -46,7 +46,7 @@ const News = ({ news , showLoadMoreButton }) => {
     };
 
     return (
-        <section className="relative flex flex-col justify-center w-full px-16 pb-5 mx-2 pt-36 2xl:mx-52 lg:mx-14 md:mx-28 sm:mx-6">
+        <section className="relative flex flex-col justify-center w-full pb-5 mx-2 t- pt-36 2xl:mx-52 lg:mx-14 md:mx-14 sm:mx-6">
             <h2 className="font-oswald text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
                 NOTICIAS
             </h2>
