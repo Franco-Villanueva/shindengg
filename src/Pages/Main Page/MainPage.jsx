@@ -49,7 +49,7 @@ const MainPage = () => {
           
         </section>
         
-        <section className='relative flex w-full min-h-screen' >
+        <section>
             <News news={news} />
         </section>
 
