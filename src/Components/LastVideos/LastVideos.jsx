@@ -17,7 +17,7 @@ const LastVideos = () => {
           title: item.snippet.title,
           thumbnail: item.snippet.thumbnails.maxres?.url || item.snippet.thumbnails.high.url,
         }));
-        console.log(data);
+
         setVideos(videoItems);
       })
       .catch((error) => {

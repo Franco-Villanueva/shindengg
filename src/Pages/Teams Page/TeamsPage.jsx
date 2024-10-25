@@ -19,7 +19,7 @@ const TeamsPage = () => {
             })
             .then(data => {
                 if (data.length) {  // Si data es un array, verificar con length
-                    console.log(data)
+
                     setTeams(data);
                 }
             })

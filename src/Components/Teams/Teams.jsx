@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 
 const Teams = ({ teams = [] }) => { // Si teams es undefined, lo convertimos en un array vacío
-    console.log(teams);
+
 
     const newsVariants = {
         hidden: { scale: 0, opacity: 0 },

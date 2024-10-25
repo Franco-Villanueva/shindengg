@@ -32,7 +32,7 @@ const TeamDetail = () => {
      }, [id]);
     
     const handlerSelectPlayer = (player) =>{
-        console.log(player.network)
+
         setSelectPlater(player)
     }
 
