@@ -15,7 +15,7 @@ const Calendary = () => {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/matchs');
+        const response = await fetch('https://shindenggapi.onrender.com/api/matchs');
         const data = await response.json();
 
         const groupedMatches = data.reduce((acc, match) => {

@@ -10,7 +10,7 @@ const TeamDetail = () => {
     const {id} = useParams()
 
     useEffect(() => {
-        fetch(`http://localhost:3001/api/teams/${id}`)
+        fetch(`https://shindenggapi.onrender.com/api/teams/${id}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);

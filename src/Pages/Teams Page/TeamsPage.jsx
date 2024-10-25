@@ -10,7 +10,7 @@ const TeamsPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        fetch(`http://localhost:3001/api/teams`)
+        fetch(`https://shindenggapi.onrender.com/api/teams`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
