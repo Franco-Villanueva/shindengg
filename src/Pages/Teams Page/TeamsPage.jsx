@@ -31,7 +31,7 @@ const TeamsPage = () => {
      }, []);
 
     return ( 
-        <div className="relative w-full h-full overflow-x-hidden">
+        <div className="relative w-full min-h-screen overflow-x-hidden">
             {/* Capa del fondo con desenfoque */}
             <div 
                 className="absolute inset-0 object-contain h-auto bg-center bg-cover opacity-40"
@@ -49,7 +49,7 @@ const TeamsPage = () => {
 
             <Routes>
                 <Route path="/" element={<div className="relative w-full h-full"><Teams teams={teams} /></div>} />
-                <Route path=":id" element={<div className="relative w-full h-full"><TeamDetail /></div>} />
+                <Route path=":id" element={<div className="relative w-full h-full pt-48 pb-5"><TeamDetail /></div>} />
                 
             </Routes>
         </div>

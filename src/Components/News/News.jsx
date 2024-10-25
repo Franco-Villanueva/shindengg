@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'; // Importa motion de Framer Motion
 
-const News = ({ news , showLoadMoreButton }) => {
+const News = ({ news , showLoadMoreButton}) => {
     const [columns, setColumns] = useState('grid-cols-1');
     const [visibleNews, setVisibleNews] = useState(2);
     const [modalData, setModalData] = useState(null);
@@ -46,7 +46,7 @@ const News = ({ news , showLoadMoreButton }) => {
     };
 
     return (
-        <section className="flex flex-col justify-center px-16 pt-16 mx-2 mb-10 justify-cente 2xl:mx-52 lg:mx-14 md:mx-14 sm:mx-6">
+        <section className="flex flex-col justify-center px-16 mx-2 mb-10 justify-cente 2xl:mx-52 lg:mx-14 md:mx-14 sm:mx-6">
             <h2 className="font-oswald text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#f9b6f9] mb-4 md:mb-6 lg:mb-8 xl:mb-10">
                 NOTICIAS
             </h2>

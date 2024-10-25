@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const LastVideos = () => {
   const [Videos, setVideos] = useState([]);
 
-  const apiKey = "AIzaSyBcOQrdegzsFq1aK4FZDzHXsnT2EngGGs0";
+  const apiKey = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY ;
   const channelId = "UCoBd3hkWn3Ez7Xa76niY2pQ";
 
   useEffect(() => {

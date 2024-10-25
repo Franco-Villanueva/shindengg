@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXTwitter, faInstagram, faTwitch } from '@fortawesome/free-brands-svg-icons';
+import { faXTwitter, faInstagram, faTwitch, faKickstarter } from '@fortawesome/free-brands-svg-icons';
 
 
 const PlayerNetwork = ({ player }) => {
@@ -8,6 +8,7 @@ const PlayerNetwork = ({ player }) => {
   const xLink = player.network?.find((net) => net.includes("x.com"));
   const instagramLink = player.network?.find((net) => net.includes("instagram.com"));
   const twitchLink = player.network?.find((net) => net.includes("twitch.tv"));
+  const kickLink = player.network?.find((net) => net.includes("kick.com"));
 
   return (
     <div className="flex flex-row space-x-4">
@@ -45,6 +46,17 @@ const PlayerNetwork = ({ player }) => {
           rel="noopener noreferrer"
         >
           <FontAwesomeIcon icon={faTwitch} className="text-xl" />
+        </a>
+      )}
+
+      {kickLink && (
+        <a
+          className="transition-transform duration-300 text-white flex items-center space-x-2  hover:text-[#f9b6f9]"
+          href={kickLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faKickstarter} className="text-xl" />
         </a>
       )}
 

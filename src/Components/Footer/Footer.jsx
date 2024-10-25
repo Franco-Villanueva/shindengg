@@ -29,7 +29,7 @@ const Footer = () => {
                 <ul className="flex flex-col space-y-2">
                   <Link to={'/'} className="text-white hover:text-[#f9b6f9]" onClick={() =>window.scrollTo({ top: 0, behavior: 'smooth'})}>Inicio</Link>
                   <li><Link to={'/calendary'} className="text-white hover:text-[#f9b6f9]">Calendario</Link></li>
-                  <li><Link to={'/shop'} className="text-white hover:text-[#f9b6f9]">Shop</Link></li>
+                  <li><Link to={'/shop'} className="text-white hover:text-[#f9b6f9]">Tienda</Link></li>
                   <li><Link to={'/teams'} className="text-white hover:text-[#f9b6f9]">Teams</Link></li>
                   <li><Link to={'/news'} className="text-white hover:text-[#f9b6f9]">Noticias</Link></li>
                 </ul>

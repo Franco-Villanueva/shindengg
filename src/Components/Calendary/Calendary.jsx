@@ -39,7 +39,7 @@ const Calendary = () => {
   };
 
   return (
-    <section className="flex flex-col justify-center h-screen px-1 mx-0 my-0 w-100 lg:px-16 xl:px-16 2xl:mx-52 lg:mx-14 md:mx-28 sm:mx-6 md:my-0 lg:my-0 xl:my-0">
+    <section className="flex flex-col justify-center px-1 mx-0 my-0 lg:px-16 xl:px-16 2xl:mx-52 lg:mx-14 md:mx-28 sm:mx-6 md:my-0 lg:my-0 xl:my-0">
       <h2 className='font-oswald text-3xl mt-7 sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-[#f9b6f9]'>CALENDARIO</h2>
       <div
         className={`relative min-h-[450px] w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4`}
