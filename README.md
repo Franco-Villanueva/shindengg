@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# 🕹️ <h1>Shindengg Esports Project</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Shindengg Esports** es una plataforma dedicada a los seguidores del equipo de esports **Shindengg**, donde pueden consultar información sobre equipos, jugadores, noticias de torneos y próximos partidos. La aplicación ofrece una experiencia inmersiva con un calendario de eventos, detalles sobre equipos y jugadores, y noticias de interés del mundo esports.
 
-## Available Scripts
+## 🚀 Tecnologías Utilizadas
 
-In the project directory, you can run:
+### Frontend
+- **React**: Construcción de interfaces de usuario dinámicas.
+- **Tailwind CSS**: Estilización y diseño responsivo de los componentes.
+- **Framer Motion**: Animaciones en elementos interactivos.
+- **React Router**: Navegación entre las diferentes secciones de la plataforma.
 
-### `npm start`
+### Backend
+- **Node.js con Express**: Creación del servidor y gestión de rutas de la API.
+- **Sequelize**: ORM para la conexión y administración de la base de datos.
+- **PostgreSQL**: Base de datos para almacenar información sobre jugadores, equipos, partidos y noticias.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Implementación
+- **Render**: Plataforma de despliegue para el backend y la base de datos PostgreSQL.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🌟 Características
 
-### `npm test`
+### Vista de Equipos y Jugadores
+- **Información Detallada**: Presenta detalles sobre los equipos de Shindengg, como jugadores, roles, edades, nacionalidades y estadísticas.
+- **Roles Específicos**: Cada jugador está asociado a un equipo y cumple un rol dentro de juegos específicos (CS2, Valorant, Fortnite).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Noticias de Esports
+- **Actualización Constante**: Muestra noticias recientes de torneos y eventos importantes en el ámbito de los esports.
+- **Carga Dinámica**: Permite al usuario cargar y visualizar más noticias conforme navega en la plataforma.
 
-### `npm run build`
+### Calendario de Partidos
+- **Vista de Eventos Programados**: Detalla los partidos programados, incluyendo fecha, tipo de partido y resultados anteriores.
+- **Interactividad**: Animaciones interactivas que permiten expandir cada mes para ver los partidos programados en ese período.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Integración con Juegos
+- **Vinculación Específica**: Cada equipo y partido está relacionado con un juego en particular (CS2, Valorant o Fortnite), mejorando la organización y segmentación de la información en la plataforma.
