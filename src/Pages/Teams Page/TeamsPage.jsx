@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Teams from '../../Components/Teams/Teams';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import TeamDetail from '../../Components/Teams/TeamDetail/TeamDetail';
 
 const TeamsPage = () => {
@@ -50,7 +50,7 @@ const TeamsPage = () => {
             <Routes>
                 <Route path="/" element={<div className="relative w-full h-full"><Teams teams={teams} /></div>} />
                 <Route path=":id" element={<div className="relative w-full h-full pt-48 pb-5"><TeamDetail /></div>} />
-                
+                <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
         </div>
     );

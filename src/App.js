@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import NewsPage from './Pages/News Page/NewsPage';
 import Navbar from './Components/NavBar/Navbar';
@@ -23,6 +23,7 @@ const App = () => {
           <Route path="/news" element={<PageTransition><NewsPage /></PageTransition>} />
           <Route path="/shop" element={<PageTransition><ShopPage /></PageTransition>} />
           <Route path="/calendary" element={<PageTransition><CalendaryPage /></PageTransition>} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AnimatePresence>
     </div>
