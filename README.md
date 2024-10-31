@@ -1,33 +1,36 @@
-Shindengg Esports Project
-Este proyecto es una plataforma para el equipo de esports Shindengg, en la cual se pueden consultar equipos, jugadores, noticias de torneos y próximos partidos. La aplicación ofrece una interfaz para los seguidores de esports donde pueden ver el calendario de eventos, acceder a detalles sobre equipos y jugadores, y explorar noticias de interés.
+# 🕹️ <h1>Shindengg Esports Project</h1>
 
-Tecnologías Utilizadas
-El proyecto se desarrolla utilizando las siguientes tecnologías:
+**Shindengg Esports** es una plataforma dedicada a los seguidores del equipo de esports **Shindengg**, donde pueden consultar información sobre equipos, jugadores, noticias de torneos y próximos partidos. La aplicación ofrece una experiencia inmersiva con un calendario de eventos, detalles sobre equipos y jugadores, y noticias de interés del mundo esports.
 
-Frontend:
-React: Para la construcción de interfaces de usuario dinámicas.
-Tailwind CSS: Para el estilo de los componentes y el diseño responsivo.
-Framer Motion: Para animaciones en elementos interactivos.
-React Router: Para la navegación de las diferentes secciones.
-Backend:
-Node.js con Express: Para crear un servidor y manejar las rutas de la API.
-Sequelize: ORM para la conexión y gestión de la base de datos.
-PostgreSQL: Base de datos para almacenar información de jugadores, equipos, partidos y noticias.
-Implementación:
-Render: Plataforma de despliegue para el backend y la base de datos PostgreSQL.
-Características
-Vista de Equipos y Jugadores:
+## 🚀 Tecnologías Utilizadas
 
-Despliega detalles sobre los equipos de Shindengg, sus jugadores, roles, edades, nacionalidades y estadísticas.
-Cada jugador pertenece a un equipo y tiene un rol dentro de juegos específicos (CS2, Valorant, Fortnite).
-Noticias de Esports:
+### Frontend
+- **React**: Construcción de interfaces de usuario dinámicas.
+- **Tailwind CSS**: Estilización y diseño responsivo de los componentes.
+- **Framer Motion**: Animaciones en elementos interactivos.
+- **React Router**: Navegación entre las diferentes secciones de la plataforma.
 
-Consulta noticias actualizadas de torneos y eventos de esports.
-Permite visualizar más noticias a medida que el usuario navega por la plataforma.
-Calendario de Partidos:
+### Backend
+- **Node.js con Express**: Creación del servidor y gestión de rutas de la API.
+- **Sequelize**: ORM para la conexión y administración de la base de datos.
+- **PostgreSQL**: Base de datos para almacenar información sobre jugadores, equipos, partidos y noticias.
 
-Muestra los partidos programados, con detalles como fecha, tipo de partido y resultados previos.
-Animaciones interactivas permiten expandir cada mes para ver los partidos programados.
-Integración con Juegos:
+### Implementación
+- **Render**: Plataforma de despliegue para el backend y la base de datos PostgreSQL.
 
-Cada equipo y partido está vinculado a un juego específico, como CS2, Valorant o Fortnite, mejorando la segmentación de la información.
+## 🌟 Características
+
+### Vista de Equipos y Jugadores
+- **Información Detallada**: Presenta detalles sobre los equipos de Shindengg, como jugadores, roles, edades, nacionalidades y estadísticas.
+- **Roles Específicos**: Cada jugador está asociado a un equipo y cumple un rol dentro de juegos específicos (CS2, Valorant, Fortnite).
+
+### Noticias de Esports
+- **Actualización Constante**: Muestra noticias recientes de torneos y eventos importantes en el ámbito de los esports.
+- **Carga Dinámica**: Permite al usuario cargar y visualizar más noticias conforme navega en la plataforma.
+
+### Calendario de Partidos
+- **Vista de Eventos Programados**: Detalla los partidos programados, incluyendo fecha, tipo de partido y resultados anteriores.
+- **Interactividad**: Animaciones interactivas que permiten expandir cada mes para ver los partidos programados en ese período.
+
+### Integración con Juegos
+- **Vinculación Específica**: Cada equipo y partido está relacionado con un juego en particular (CS2, Valorant o Fortnite), mejorando la organización y segmentación de la información en la plataforma.
