@@ -6,8 +6,6 @@
 
 ## 🚀 Tecnologías Utilizadas
 
-## 🚀 Tecnologías Utilizadas
-
 ### Frontend : **https://github.com/Franco-Villanueva/shindengg**
 - **React**: Construcción de interfaces de usuario dinámicas.
 - **Tailwind CSS**: Estilización y diseño responsivo de los componentes.
